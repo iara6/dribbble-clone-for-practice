@@ -1,0 +1,63 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Mona Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+/* 
+<weight>: Use a value from 200 to 900 */
+
+.header-div {
+  padding-inline: 2.5rem;
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+
+}
+.header-div__logo img {
+  height: 25px;
+}
+
+.header-div__navigation div {
+  display: flex;
+  gap: 1rem;
+}
+
+.header-div li {
+  list-style: none;
+  font-weight: 600;
+}
+
+.header-div__action-buttons {
+  margin-left: auto;
+}
+.header-div button {
+  height: 3rem;
+  padding-inline: 1.5rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: all 200ms linear;
+}
+/* rgb(13, 12, 34) */
+
+.header-div button:first-child {
+  background-color: transparent;
+  color: black;
+}
+.header-div button:nth-child(2) {
+  background-color: rgb(13, 12, 34);
+  color: white;
+}
+.header-div button:first-child:hover {
+  color: rgb(64, 64, 86);
+}
+.header-div button:nth-child(2):hover {
+  background-color: rgb(64, 64, 86);
+}
