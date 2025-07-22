@@ -88,9 +88,46 @@ body {
   width: 100%;
   border: 1px solid blue;
 }
+.general-info__text h1 {
+  font-size: 3.2rem;
+  line-height: 3.45rem;
+  font-weight: 600;
+  transform: scale(1 ,0.88);
+}
+.general-info__text h2 {
+  font-size: 0.97rem;
+  font-weight: 400;
+  padding-top: 0.45rem;
+}
+
 .general-info__animation {
   height: 430px;
   max-width: 614px;
   width: 100%;
   border: 1px solid green;
+}
+
+.search-options {
+  display: flex;
+}
+
+.search-options div {
+  border: 1px solid red;
+  border-radius: 1.5rem;
+  font-size: 0.82rem;
+  font-weight: 650;
+  color: rgb(58, 53, 70);
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding-inline: 13px;
+  cursor: pointer;
+}
+.search-options div i {
+  font-size: 1rem;
+}
+
+input[type="radio"] {
+  opacity: 0;
+  width: 0;
 }
