@@ -109,25 +109,50 @@ body {
 
 .search-options {
   display: flex;
+  gap: 1.25rem;
+  margin-top: 2.5rem;
 }
 
-.search-options div {
-  border: 1px solid red;
-  border-radius: 1.5rem;
+.search-options label { 
+  /* border: 1px solid red; */
+  border-radius: 1.3rem;
   font-size: 0.82rem;
   font-weight: 650;
   color: rgb(58, 53, 70);
   display: flex;
   align-items: center;
   height: 40px;
-  padding-inline: 13px;
+  padding-inline: 1.2rem;
   cursor: pointer;
 }
-.search-options div i {
-  font-size: 1rem;
+.search-options label i { 
+  font-size: 0.95rem;
+  margin-right: 8px;
 }
 
 input[type="radio"] {
   opacity: 0;
   width: 0;
+  /* border: 2px solid blue; */
 }
+
+/* input[type="radio"]:checked + label {
+  background-color: black;
+} */
+
+.search-options label:has(input[type="radio"]:checked) {
+  background-color: rgb(58, 53, 70);
+  color: white;
+}
+
+input[type="search"] {
+  color: rgb(6, 3, 24);
+  line-height: 1.75rem;
+  height: 3.5rem;
+  padding-left: 1.5rem;
+  border-radius: 1.7rem;
+}
+
+/* search icon rgb(234, 76, 137)
+on hover rgb(236, 94, 149) 
+40px to 40px*/
