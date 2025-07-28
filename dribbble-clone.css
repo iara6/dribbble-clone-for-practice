@@ -133,26 +133,53 @@ body {
 input[type="radio"] {
   opacity: 0;
   width: 0;
-  /* border: 2px solid blue; */
 }
-
-/* input[type="radio"]:checked + label {
-  background-color: black;
-} */
 
 .search-options label:has(input[type="radio"]:checked) {
   background-color: rgb(58, 53, 70);
   color: white;
 }
-
+.search-box-wrapper {
+  width: 100%;
+  position: relative;
+  margin-top: 1rem;
+}
 input[type="search"] {
   color: rgb(6, 3, 24);
   line-height: 1.75rem;
-  height: 3.5rem;
+  height: 3.2rem;
   padding-left: 1.5rem;
-  border-radius: 1.7rem;
+  border-radius: 1.8rem;
+  border: none;
+  width: 100%;
 }
 
+.search-box-wrapper:hover input[type="search"],
+input[type="search"]:focus  {
+  outline: solid 2px rgb(216, 112, 147, 0.2);
+}
+
+.search-button {
+  background-color: rgb(234, 76, 137);
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  top: 6px;
+  right: 6px;
+}
+.search-button svg {
+  color: #ffffff;
+}
+.search-button:hover {
+  background-color: rgb(236, 94, 149);
+}
 /* search icon rgb(234, 76, 137)
 on hover rgb(236, 94, 149) 
 40px to 40px*/
