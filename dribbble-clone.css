@@ -152,6 +152,7 @@ input[type="search"] {
   border-radius: 1.8rem;
   border: none;
   width: 100%;
+  font-size: 0.9rem;
 }
 
 .search-box-wrapper:hover input[type="search"],
@@ -180,6 +181,8 @@ input[type="search"]:focus  {
 .search-button:hover {
   background-color: rgb(236, 94, 149);
 }
-/* search icon rgb(234, 76, 137)
-on hover rgb(236, 94, 149) 
-40px to 40px*/
+
+.trending-items-container span {
+  font-size: 0.8125rem; /* 13px */
+  font-weight: 600;
+}
