@@ -182,7 +182,40 @@ input[type="search"]:focus  {
   background-color: rgb(236, 94, 149);
 }
 
-.trending-items-container span {
+.trending-items-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+.trending-items-container div:first-child {
   font-size: 0.8125rem; /* 13px */
   font-weight: 600;
+}
+
+.trending-items-container a {
+  text-decoration: none;
+  color: rgb(13, 12, 34);
+  font-size: 0.75rem; /* 12px */
+  padding: 0.4rem 1rem;
+  border: 1px solid rgb(231, 231, 233);
+  border-radius: 1rem;
+
+  display: inline-block; 
+  text-align: center;
+  vertical-align: middle;
+}
+.shots-trends a:not(:last-child)  {
+  margin-right: 0.3rem;
+}
+.shots-trends {
+  display: contents;  
+}
+/* .shots-trends a {
+ display: flex;
+} */
+.shots-trends,
+.designers-trends,
+.services-trends {
+  display: none;
 }
