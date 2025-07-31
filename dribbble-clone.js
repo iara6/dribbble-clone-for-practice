@@ -35,3 +35,27 @@ designers.addEventListener('change', changePlaceholder);
 services.addEventListener('change', changePlaceholder);
 
 changePlaceholder();
+
+
+/* VIDEOPLAYER CLIPS */
+
+const videoclips = [
+  'videos/Dipa-Inhouse.mp4',
+  'videos/Geex-Arts.mp4',
+  'videos/Hitoshi-Morita.mp4',
+  'videos/ILLO.mp4',
+];
+
+const videoPlayer = document.querySelector('.video-player');
+let currentVideoInd = 0;
+
+function playNextVideoclip() {
+  currentVideoInd = (currentVideoInd + 1)%videoclips.length;
+  videoPlayer.src = videoclips[currentVideoInd];
+  videoPlayer.play();
+};
+
+videoPlayer.src = videoclips[currentVideoInd];
+videoPlayer.play();
+
+videoPlayer.addEventListener('ended', playNextVideoclip);

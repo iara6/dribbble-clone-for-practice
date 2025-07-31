@@ -82,7 +82,7 @@ body {
 .general-info {
   padding-inline: 4.5rem;
   display: flex;
-  border: 1px solid red;
+  border: 3px solid red;
 }
 .general-info__text {
   width: 100%;
@@ -105,6 +105,13 @@ body {
   max-width: 614px;
   width: 100%;
   border: 1px solid green;
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+.general-info__animation video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .search-options {
