@@ -55,7 +55,7 @@ function playNextVideoclip() {
   videoPlayer.play();
 };
 
-/* videoPlayer.src = videoclips[currentVideoInd];
-videoPlayer.play(); */
+videoPlayer.src = videoclips[currentVideoInd];
+videoPlayer.play();
 
 videoPlayer.addEventListener('ended', playNextVideoclip);
