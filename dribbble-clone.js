@@ -57,12 +57,7 @@ const data = [{
   clip: 'videos/ILLO.mp4'
 }];
 
-const videoclips = [
-  'videos/Dipa-Inhouse.mp4',
-  'videos/Geex-Arts.mp4',
-  'videos/Hitoshi-Morita.mp4',
-  'videos/ILLO.mp4',
-];
+const videoclips = data.map(item => item.clip);
 
 const videoPlayer = document.querySelector('.video-player');
 let currentVideoInd = 0;
