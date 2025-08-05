@@ -37,38 +37,51 @@ services.addEventListener('change', changePlaceholder);
 changePlaceholder();
 
 
-/* VIDEOPLAYER CLIPS */
+/* VIDEOPLAYER CLIPS with INFO */
 
-const data = [{
+const designersData = [{
+  name: 'AmazingUI',
+  img: 'images-icons/AmazingUI.webp',
+  clip: 'videos/AmazingUI.mp4'
+}, {
   name: 'DipaInhouse',
-  img: 'Dipa-Inhouse.webp',
+  img: 'images-icons/Dipa-Inhouse.webp',
   clip: 'videos/Dipa-Inhouse.mp4'
 }, {
   name: 'GeexArts',
-  img: 'Geex-Arts.webp',
+  img: 'images-icons/Geex-Arts.webp',
   clip: 'videos/Geex-Arts.mp4'
 }, {
   name: 'Hitoshi Morita',
-  img: 'Hitoshi-Morita.webp',
+  img: 'images-icons/Hitoshi-Morita.webp',
   clip: 'videos/Hitoshi-Morita.mp4'
 }, {
   name: 'ILLO',
-  img: 'ILLO.webp',
+  img: 'images-icons/ILLO.webp',
   clip: 'videos/ILLO.mp4'
 }];
 
-const videoclips = data.map(item => item.clip);
+const videoclips = designersData.map(item => item.clip);
+const images = designersData.map(item => item.img);
+const names = designersData.map(item => item.name);
 
 const videoPlayer = document.querySelector('.video-player');
+const designersImg = document.querySelector('.designers-info__img');
+const designersName = document.querySelector('.designers-info__name');
+
 let currentVideoInd = 0;
 
 function playNextVideoclip() {
   currentVideoInd = (currentVideoInd + 1)%videoclips.length;
   videoPlayer.src = videoclips[currentVideoInd];
+  designersImg.src = images[currentVideoInd];
+  designersName.innerHTML = names[currentVideoInd];
   videoPlayer.play();
 };
 
 videoPlayer.src = videoclips[currentVideoInd];
+designersImg.src = images[currentVideoInd];
+designersName.innerHTML = names[currentVideoInd];
 videoPlayer.play();
 
 videoPlayer.addEventListener('ended', playNextVideoclip);
