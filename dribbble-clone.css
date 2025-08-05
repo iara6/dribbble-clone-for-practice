@@ -116,6 +116,10 @@ body {
   object-fit: cover;
 }
 
+.general-info__animation:hover .play-pause-button {
+  opacity: 1;
+}
+
 .play-pause-button {
   height: 40px;
   width: 40px;
@@ -126,16 +130,25 @@ body {
   cursor: pointer;
 
   position: absolute;
-  top: 50%;
-  left: 1rem;
+  left: 0.9rem;
+  bottom: 0.8rem;
   z-index: 10;
+
+  opacity: 0;
+  transition: opacity 250ms linear;
 }
 .play-pause-button:hover i {
   color: orangered;
 }
+.play-pause-button:active {
+  transform: scale(0.9, 0.9);
+}
 .play-pause-button .fa-pause {
   font-size: 1.15rem;
-  transform: scale(0.9, 1);
+  transform: scale(0.93, 0.93);
+}
+.play-pause-button .fa-play {
+  display: none;
 }
 .designers-info {
   height: 38px;
@@ -152,8 +165,8 @@ body {
   gap: 8px;
 
   position: absolute;
-  top: 50%;
-  right: 1rem;
+  right: 0.9rem;
+  bottom: 0.8rem;
   z-index: 10;
 }
 

@@ -39,6 +39,24 @@ changePlaceholder();
 
 /* VIDEOPLAYER CLIPS */
 
+const data = [{
+  name: 'DipaInhouse',
+  img: 'Dipa-Inhouse.webp',
+  clip: 'videos/Dipa-Inhouse.mp4'
+}, {
+  name: 'GeexArts',
+  img: 'Geex-Arts.webp',
+  clip: 'videos/Geex-Arts.mp4'
+}, {
+  name: 'Hitoshi Morita',
+  img: 'Hitoshi-Morita.webp',
+  clip: 'videos/Hitoshi-Morita.mp4'
+}, {
+  name: 'ILLO',
+  img: 'ILLO.webp',
+  clip: 'videos/ILLO.mp4'
+}];
+
 const videoclips = [
   'videos/Dipa-Inhouse.mp4',
   'videos/Geex-Arts.mp4',
@@ -59,3 +77,24 @@ videoPlayer.src = videoclips[currentVideoInd];
 videoPlayer.play();
 
 videoPlayer.addEventListener('ended', playNextVideoclip);
+
+
+/* VIDEOPLAYER PLAY/PAUSE BUTTON */
+
+const playPauseBtn = document.querySelector('.play-pause-button');
+const playIcon = document.querySelector('.fa-play');
+const pauseIcon = document.querySelector('.fa-pause');
+
+playPauseBtn.addEventListener('click', () => {
+  const isPlayIconDisplayed = window.getComputedStyle(playIcon).display === "none";
+
+  if(isPlayIconDisplayed) {
+    playIcon.style.display = "block";
+    videoPlayer.pause();
+    pauseIcon.style.display = "none";
+  } else {
+    playIcon.style.display = "none";
+    videoPlayer.play();
+    pauseIcon.style.display = "block";
+  }
+});
