@@ -66,6 +66,7 @@ const images = designersData.map(item => item.img);
 const names = designersData.map(item => item.name);
 
 const videoPlayer = document.querySelector('.video-player');
+const designersInfoContainer = document.querySelector('.designers-info');
 const designersImg = document.querySelector('.designers-info__img');
 const designersName = document.querySelector('.designers-info__name');
 
@@ -76,9 +77,15 @@ function playNextVideoclip() {
   videoPlayer.src = videoclips[currentVideoInd];
   designersImg.src = images[currentVideoInd];
   designersName.innerHTML = names[currentVideoInd];
+
+  designersInfoContainer.classList.remove('slide-in-animation');
+  void designersInfoContainer.offsetWidth;
+  designersInfoContainer.classList.add('slide-in-animation');
+
   videoPlayer.play();
 };
 
+designersInfoContainer.classList.add('slide-in-animation');
 videoPlayer.src = videoclips[currentVideoInd];
 designersImg.src = images[currentVideoInd];
 designersName.innerHTML = names[currentVideoInd];

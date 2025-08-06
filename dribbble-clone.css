@@ -83,6 +83,7 @@ body {
   padding-inline: 4.5rem;
   display: flex;
   border: 3px solid red;
+  gap: clamp(1rem, 8vw, 10rem);
 }
 .general-info__text {
   width: 100%;
@@ -150,9 +151,27 @@ body {
 .play-pause-button .fa-play {
   display: none;
 }
-.designers-info {
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+}
+
+.slide-in-animation {
+  /* animation: slide-in 1s; */
+  animation: slide-in 600ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.designers-info { 
   height: 38px;
-  /* width: 40px; */
   box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.14);
   border-radius: 1.2rem;
   background-color: rgb(255, 255, 255);
@@ -169,8 +188,8 @@ body {
   bottom: 0.8rem;
   z-index: 10;
 }
-/* transformmatrix(1, 0, 0, 1, 0, 0)
-animation-timing-functioncubic-bezier(0.34, 1.56, 0.64, 1)
+/* transform matrix(1, 0, 0, 1, 0, 0)
+animation-timing-function cubic-bezier(0.34, 1.56, 0.64, 1)
 slide in animation (transform-translate + opacity) */
 .designers-info img {
   height: 33px;
@@ -293,4 +312,8 @@ input[type="search"]:focus  {
 .designers-trends,
 .services-trends {
   display: none;
+}
+
+.main-content-wrapper {
+  padding-inline: 4.5rem;
 }
