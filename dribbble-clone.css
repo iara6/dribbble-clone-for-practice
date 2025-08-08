@@ -331,16 +331,23 @@ input[type="search"]:focus  {
 .main-content__nav {
   display: flex;
   font-size: 0.9rem;
-  align-items: center;
+  /* align-items: center; */
   justify-content: space-between;
   margin-bottom: 2rem;
 }
-
+.main-content__dropdown-btn {
+  position: relative;
+  /* border: 2px solid hotpink; */
+}
 .main-content__dropdown-btn .fa-chevron-down {
   font-size: 0.6rem;
   margin-left: 0.9rem;
+  transition: transform 170ms linear;
+  margin-bottom: -2px;
 }
 .popular-btn {
+  display: flex;
+  align-items: center;
   font-weight: 500;
   border: 1px solid rgb(128, 128, 128, 0.2);
   border-radius: 8px;
@@ -349,20 +356,25 @@ input[type="search"]:focus  {
 }
 
 .dropdown-btn-options {
+  display: none;
+  position: absolute;
+  top: 130%;
+  left: 0;
+  z-index: 10;
   list-style: none;
   font-weight: 500;
   font-size: 0.75rem;
   border: 1px solid rgb(128, 128, 128, 0.2);
   border-radius: 8px;
   padding: 0.4rem 0.5rem;
-  margin-top: 1.2rem;
+  /* margin-top: 1.2rem; */
   width: 11rem; /*  */
 }
 
 .dropdown-btn-options li {
   padding: 0.7rem 0.5rem;
   cursor: pointer;
-  border: 1px solid orange;
+  /* border: 1px solid orange; */
   display: flex;
   align-items: center;
   justify-content: space-between;

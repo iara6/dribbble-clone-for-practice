@@ -113,3 +113,23 @@ playPauseBtn.addEventListener('click', () => {
     pauseIcon.style.display = "block";
   }
 });
+
+/* POPULAR(options) BUTTON in filter section*/
+
+const optionsBtnContainer = document.querySelector('.main-content__dropdown-btn');
+const optionsBtn = document.querySelector('.popular-btn');
+const dropdownOptions = document.querySelector('.dropdown-btn-options');
+const chevronDown = document.querySelector('.popular-chevron-down');
+
+optionsBtn.addEventListener('click', () => {
+  const isVisible = dropdownOptions.style.display === "block";
+  dropdownOptions.style.display = isVisible ? "none" : "block";
+  chevronDown.style.transform = isVisible ? "rotate(0deg)" : "rotate(180deg)";
+});
+
+window.addEventListener('click', (e) => {
+  if ((!optionsBtnContainer.contains(e.target))) {
+    dropdownOptions.style.display = "none";
+    chevronDown.style.transform = "rotate(0deg)";
+  }
+});
