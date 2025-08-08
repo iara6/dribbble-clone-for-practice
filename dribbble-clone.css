@@ -88,12 +88,15 @@ body {
 .general-info__text {
   width: 100%;
   border: 1px solid blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .general-info__text h1 {
-  font-size: 3.2rem;
-  line-height: 3.45rem;
+  font-size: 3.3rem;
+  line-height: 3.5rem;
   font-weight: 600;
-  transform: scale(1 ,0.88);
+  transform: scale(1 ,0.9);
 }
 .general-info__text h2 {
   font-size: 0.97rem;
@@ -285,6 +288,7 @@ input[type="search"]:focus  {
 .trending-items-container div:first-child {
   font-size: 0.8125rem; /* 13px */
   font-weight: 600;
+  padding-left: 0.75rem;
 }
 
 .trending-items-container a {
@@ -344,10 +348,29 @@ input[type="search"]:focus  {
   cursor: pointer;
 }
 
-.main-content__dropdown-btn ul {
-  display: none;
+.dropdown-btn-options {
+  list-style: none;
+  font-weight: 500;
+  font-size: 0.75rem;
+  border: 1px solid rgb(128, 128, 128, 0.2);
+  border-radius: 8px;
+  padding: 0.4rem 0.5rem;
+  margin-top: 1.2rem;
+  width: 11rem; /*  */
 }
 
+.dropdown-btn-options li {
+  padding: 0.7rem 0.5rem;
+  cursor: pointer;
+  border: 1px solid orange;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dropdown-btn-options li i {
+  font-size: 0.7rem;
+}
 .main-content__filter-categories {
   list-style: none;
   display: flex;
