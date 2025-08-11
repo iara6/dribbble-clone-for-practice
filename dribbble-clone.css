@@ -379,7 +379,10 @@ input[type="search"]:focus  {
   align-items: center;
   justify-content: space-between;
 }
-
+.dropdown-btn-options li:last-child {
+  color: rgb(61, 61, 78);
+  /* rgb(13, 12, 34); */
+}
 .dropdown-btn-options li i {
   font-size: 0.7rem;
 }
@@ -418,4 +421,39 @@ input[type="search"]:focus  {
 
 .main-content__filters-btn span svg {
   margin-right: 2px;
+}
+
+.filters-expandable-section {
+  padding-bottom: 2rem; /*  */
+}
+
+.filters-expandable-section label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 550;
+  margin-bottom: 0.7rem;
+}
+.filters_input-container {
+  position: relative;
+}
+.small-search-icon {
+  position: absolute;
+  top: 1.25rem;
+  left: 1rem;
+}
+.filters-expandable-section input {
+  border: 1.5px solid rgb(231, 231, 233);
+  border-radius: 0.75rem;
+  height: 3.5rem;
+  font-size: 0.875rem;
+  line-height: 1.75rem;
+  padding: 1.125rem 1.25rem 1.125rem 2.75rem;
+}
+
+.filters-expandable-section input:hover {
+  box-shadow: 0 0 3px 2px rgb(231, 231, 233);
+}
+.filters-expandable-section input:focus {
+  outline-color: rgb(234, 100, 217, 0.4);
+  box-shadow: 0 0 0 4px rgb(234, 100, 217, 0.1);
 }

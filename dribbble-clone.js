@@ -1,4 +1,4 @@
-/* SEARCH BOX PLACEHOLDER AND TRENDS' LINKS */
+/* SEARCH BOX PLACEHOLDER AND TRENDS LINKS */
 
 const searchInput = document.querySelector('.search-box-input');
 const shots = document.getElementById('shots');
