@@ -114,7 +114,7 @@ playPauseBtn.addEventListener('click', () => {
   }
 });
 
-/* POPULAR(options) BUTTON in filter section*/
+/* POPULAR(options) BUTTON in filter section */
 
 const optionsBtnContainer = document.querySelector('.main-content__dropdown-btn');
 const optionsBtn = document.querySelector('.popular-btn');
@@ -133,3 +133,25 @@ window.addEventListener('click', (e) => {
     chevronDown.style.transform = "rotate(0deg)";
   }
 });
+
+
+/* HEX COLORS in filter section */
+
+const colorInput = document.querySelector('.color-input');
+const colorPalette = document.querySelector('.color-palette-container');
+
+colorInput.addEventListener('focus', () => {
+  const isVisible = colorPalette.style.display === "block";
+  colorPalette.style.display = isVisible ? "none" : "block";
+});
+
+window.addEventListener('click', (q) => {
+  if ((!colorInput.contains(q.target))) {
+    colorPalette.style.display = "none";
+  }
+});
+
+const colorLinks = document.querySelectorAll('.color a');
+const colorCodes = Array.from(colorLinks, link => link.textContent.slice(1,7));
+
+console.log(colorCodes);
