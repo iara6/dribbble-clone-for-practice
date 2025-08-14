@@ -481,10 +481,10 @@ input[type="search"]:focus  {
   color: rgb(128, 128, 128, 0.7);
 }
 
-.filters_input-container2 {
+/* .filters_input-container2 {
   content: 'color';
 }
-
+ */
 .filters_input-container2::before {
   content: "#";
   font-size: 1rem;
@@ -496,8 +496,16 @@ input[type="search"]:focus  {
   display: none;
 }
 
-.filters_input-container2:focus-within::before {
+.filters_input-container2:focus-within::before,
+.filters_input-container2.has-color::before {
   display: block;
+}
+
+.filters_input-container2 input {
+  text-transform: uppercase; 
+}
+.filters_input-container2 input::placeholder {
+  text-transform: none; 
 }
 
 .filters_input-container2 input:focus {

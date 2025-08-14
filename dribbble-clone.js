@@ -151,7 +151,22 @@ window.addEventListener('click', (q) => {
   }
 });
 
-const colorLinks = document.querySelectorAll('.color a');
-const colorCodes = Array.from(colorLinks, link => link.textContent.slice(1,7));
+const colors = document.querySelectorAll('.color');
+console.log(colors);
 
-console.log(colorCodes);
+
+const colorLinks = document.querySelectorAll('.color a');
+console.log(colorLinks);
+const colorInputContainer = document.querySelector('.filters_input-container2');
+
+
+colorLinks.forEach((color) => {
+  color.addEventListener('click', () => {
+    const colorCode = color.innerHTML;
+    colorInput.value = colorCode.slice(1,7).toUpperCase(); 
+    colorInputContainer.classList.add('has-color');
+    colorInput.style.paddingLeft = "3.2rem";
+  });
+});
+
+colorInput.value = colorInput.value.toUpperCase();
