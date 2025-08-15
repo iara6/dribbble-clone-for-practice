@@ -442,22 +442,23 @@ input[type="search"]:focus  {
   font-weight: 550;
   margin-bottom: 0.7rem;
 }
+
 .filters_input-container,
 .filters_input-container2 {
   position: relative;
-  /* display: inline-flex; */ /*  */
 }
+
 .small-search-icon,
 .color-palette-icon {
   position: absolute;
   top: 1.25rem;
   left: 1rem;
 }
-/* .hashtag {
-  position: absolute;
-  top: 1rem;
-  left: 2rem;
-} */
+
+.color-palette-icon.solid-color *:not(circle[r="3"]) {
+  fill: var(--icon-color);
+}
+ 
 .filters-expandable-section input,
 .timeframe-options-div {
   width: 100%;

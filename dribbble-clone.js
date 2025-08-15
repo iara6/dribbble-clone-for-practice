@@ -151,14 +151,9 @@ window.addEventListener('click', (q) => {
   }
 });
 
-const colors = document.querySelectorAll('.color');
-console.log(colors);
-
-
 const colorLinks = document.querySelectorAll('.color a');
-console.log(colorLinks);
 const colorInputContainer = document.querySelector('.filters_input-container2');
-
+const colorPaletteIcon = document.querySelector('.color-palette-icon');
 
 colorLinks.forEach((color) => {
   color.addEventListener('click', () => {
@@ -166,7 +161,20 @@ colorLinks.forEach((color) => {
     colorInput.value = colorCode.slice(1,7).toUpperCase(); 
     colorInputContainer.classList.add('has-color');
     colorInput.style.paddingLeft = "3.2rem";
+
+    colorPaletteIcon.classList.add('solid-color');
+    colorPaletteIcon.style.setProperty('--icon-color', colorCode);
   });
 });
 
-colorInput.value = colorInput.value.toUpperCase();
+colorInput.addEventListener('input', () => {
+  colorInput.value = colorInput.value.replace(/[^0-9a-fA-F]/g, '').toUpperCase();
+});
+
+colorInput.addEventListener('keydown', (event)=> {
+  if (event.key === 'Enter') {
+    colorPaletteIcon.classList.add('solid-color');
+    colorPaletteIcon.style.setProperty('--icon-color', '#' + colorInput.value);
+  }
+});
+
