@@ -134,6 +134,26 @@ window.addEventListener('click', (e) => {
   }
 });
 
+/* TIMEFRAME(now) BUTTON in filter section */
+
+const timeframeOptionsContainer = document.querySelector('.timeframe-options-div');
+const nowBtn = document.querySelector('.now-btn');
+const nowDropdownOptions = document.querySelector('.now-dropdown-btn-options');
+const nowChevronDown = document.querySelector('.now-chevron-down');
+
+nowBtn.addEventListener('click', () => {
+  const isVisible = nowDropdownOptions.style.display === "block";
+  nowDropdownOptions.style.display = isVisible ? "none" : "block";
+  nowChevronDown.style.transform = isVisible ? "rotate(0deg)" : "rotate(180deg)";
+});
+
+window.addEventListener('click', (e) => {
+  if ((!timeframeOptionsContainer.contains(e.target))) {
+    nowDropdownOptions.style.display = "none";
+    nowChevronDown.style.transform = "rotate(0deg)";
+  }
+});
+
 
 /* HEX COLORS in filter section */
 
@@ -178,3 +198,16 @@ colorInput.addEventListener('keydown', (event)=> {
   }
 });
 
+colorInput.addEventListener('input', () => {
+  if (colorInput.value === '') {
+    colorPaletteIcon.classList.remove('solid-color');
+    console.log('removed!');
+  }
+});
+
+
+if (colorInput.value === '') {
+  colorPaletteIcon.classList.remove('solid-color');
+  console.log('removed!');
+  
+}
