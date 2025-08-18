@@ -114,6 +114,16 @@ playPauseBtn.addEventListener('click', () => {
   }
 });
 
+/* DISPLAY/HIDE filter section */
+
+const filtersBtn = document.querySelector('.filters-btn');
+const filtersExpandableSection = document.querySelector('.filters-expandable-section');
+
+filtersBtn.addEventListener('click', () => {
+  filtersExpandableSection.classList.toggle('shrink');
+  
+});
+
 /* POPULAR(options) BUTTON in filter section */
 
 const optionsBtnContainer = document.querySelector('.main-content__dropdown-btn');
@@ -201,13 +211,10 @@ colorInput.addEventListener('keydown', (event)=> {
 colorInput.addEventListener('input', () => {
   if (colorInput.value === '') {
     colorPaletteIcon.classList.remove('solid-color');
-    console.log('removed!');
   }
 });
 
 
 if (colorInput.value === '') {
   colorPaletteIcon.classList.remove('solid-color');
-  console.log('removed!');
-  
 }

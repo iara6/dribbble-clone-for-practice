@@ -432,6 +432,14 @@ input[type="search"]:focus  {
   display: flex;
   justify-content: space-between;
   padding-bottom: 2rem; /*  */
+  border: 1px solid fuchsia;
+  transition: all 200ms linear;
+}
+
+.filters-expandable-section.shrink {
+  max-height: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
 .filters-expandable-section > div {
@@ -443,7 +451,7 @@ input[type="search"]:focus  {
   display: block;
   font-size: 0.85rem;
   font-weight: 550;
-  margin-bottom: 0.7rem;
+  padding-bottom: 0.7rem;
 }
 
 .filters_input-container,
