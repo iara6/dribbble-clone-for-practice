@@ -436,15 +436,18 @@ input[type="search"]:focus  {
 .filters-expandable-section {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 2rem; /*  */
   border: 1px solid fuchsia;
   transition: all 200ms linear;
-}
 
-.filters-expandable-section.shrink {
   max-height: 0;
   padding: 0;
   overflow: hidden;
+}
+
+.filters-expandable-section.open {
+  max-height: 90px;
+  overflow: visible;
+  transition: all 200ms linear;
 }
 
 .filters-expandable-section > div {

@@ -120,8 +120,7 @@ const filtersBtn = document.querySelector('.filters-btn');
 const filtersExpandableSection = document.querySelector('.filters-expandable-section');
 
 filtersBtn.addEventListener('click', () => {
-  filtersExpandableSection.classList.toggle('shrink');
-  
+  filtersExpandableSection.classList.toggle('open');
 });
 
 /* POPULAR(options) BUTTON in filter section */
