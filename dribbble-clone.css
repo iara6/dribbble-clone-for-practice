@@ -608,3 +608,41 @@ input[type="search"]:focus  {
   /* margin-top: 1.2rem; */
   width: 100%; /*  */
 }
+
+.main-content__projects-wrapper {
+  padding: 2rem 0 2.5rem;
+  width: 100%;
+}
+.main-content__projects {
+  padding-inline: 4.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(336px, 1fr));;
+
+}
+/* column-gap: 2.25rem; 
+  row-gap: 2.25rem*/
+
+.main-content__projects li {
+  list-style: none;
+}
+.project-img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.designer-information {
+  display: flex;
+  justify-content: space-between;
+}
+
+.designer-avatar {
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 50%;
+}
+
+.designer-information__stats,
+.likes,
+.views {
+  display: flex;
+}
