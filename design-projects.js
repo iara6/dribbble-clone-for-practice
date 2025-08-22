@@ -1,4 +1,4 @@
-const designProjects = [
+export const designProjects = [
   {
     id: 1,
     project: "./images-icons/project-1.webp",
