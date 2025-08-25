@@ -1,5 +1,6 @@
 import {designProjects} from './design-projects.js';
 
+
 /****************************************
  SEARCH BOX PLACEHOLDER AND TRENDS LINKS 
  ****************************************/
@@ -122,6 +123,7 @@ playPauseBtn.addEventListener('click', () => {
   }
 });
 
+
 /***************************** 
   DISPLAY/HIDE filter section 
  *****************************/
@@ -132,6 +134,7 @@ const filtersExpandableSection = document.querySelector('.filters-expandable-sec
 filtersBtn.addEventListener('click', () => {
   filtersExpandableSection.classList.toggle('open');
 });
+
 
 /******************************************
  POPULAR(options) BUTTON in filter section 
@@ -154,6 +157,7 @@ window.addEventListener('click', (e) => {
     chevronDown.style.transform = "rotate(0deg)";
   }
 });
+
 
 /****************************************
  TIMEFRAME(now) BUTTON in filter section 
@@ -249,12 +253,13 @@ colorInput.addEventListener('input', () => {
   }
 });
 
-
 if (colorInput.value === '') {
   colorPaletteIcon.classList.remove('solid-color');
 }
 
-/* GENERATE MAIN content*/
+/***********************
+  GENERATE MAIN content
+************************/
 
 const projectsContainer = document.querySelector('.main-content__projects-list');
 

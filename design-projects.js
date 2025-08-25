@@ -134,4 +134,13 @@ export const designProjects = [
     likes: 31,
     views: "1.5k",
   },
+  {
+    id: 16,
+    project: "./images-icons/project-16.webp",
+    designerName: "Afterglow",
+    icon: "./images-icons/icon-16.webp",
+    account: "team",
+    likes: 89,
+    views: "14.2k",
+  },
 ];
