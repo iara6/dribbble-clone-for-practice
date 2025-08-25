@@ -1,6 +1,8 @@
 import {designProjects} from './design-projects.js';
 
-/* SEARCH BOX PLACEHOLDER AND TRENDS LINKS */
+/****************************************
+ SEARCH BOX PLACEHOLDER AND TRENDS LINKS 
+ ****************************************/
 
 const searchInput = document.querySelector('.search-box-input');
 const shots = document.getElementById('shots');
@@ -39,7 +41,9 @@ services.addEventListener('change', changePlaceholder);
 changePlaceholder();
 
 
-/* VIDEOPLAYER CLIPS with INFO */
+/******************************
+  VIDEOPLAYER CLIPS with INFO 
+*******************************/
 
 const designersData = [{
   name: 'AmazingUI',
@@ -96,7 +100,9 @@ videoPlayer.play();
 videoPlayer.addEventListener('ended', playNextVideoclip);
 
 
-/* VIDEOPLAYER PLAY/PAUSE BUTTON */
+/******************************
+ VIDEOPLAYER PLAY/PAUSE BUTTON
+*******************************/
 
 const playPauseBtn = document.querySelector('.play-pause-button');
 const playIcon = document.querySelector('.fa-play');
@@ -116,7 +122,9 @@ playPauseBtn.addEventListener('click', () => {
   }
 });
 
-/* DISPLAY/HIDE filter section */
+/***************************** 
+  DISPLAY/HIDE filter section 
+ *****************************/
 
 const filtersBtn = document.querySelector('.filters-btn');
 const filtersExpandableSection = document.querySelector('.filters-expandable-section');
@@ -125,7 +133,9 @@ filtersBtn.addEventListener('click', () => {
   filtersExpandableSection.classList.toggle('open');
 });
 
-/* POPULAR(options) BUTTON in filter section */
+/******************************************
+ POPULAR(options) BUTTON in filter section 
+*******************************************/
 
 const optionsBtnContainer = document.querySelector('.main-content__dropdown-btn');
 const optionsBtn = document.querySelector('.popular-btn');
@@ -145,7 +155,9 @@ window.addEventListener('click', (e) => {
   }
 });
 
-/* TIMEFRAME(now) BUTTON in filter section */
+/****************************************
+ TIMEFRAME(now) BUTTON in filter section 
+ ****************************************/
 
 const timeframeOptionsContainer = document.querySelector('.timeframe-options-div');
 const nowBtn = document.querySelector('.now-btn');
@@ -186,7 +198,9 @@ nowDropdownOptions.forEach((option) => {
 });
 
 
-/* HEX COLORS in filter section */
+/******************************
+  HEX COLORS in filter section 
+*******************************/
 
 const colorInput = document.querySelector('.color-input');
 const colorPalette = document.querySelector('.color-palette-container');

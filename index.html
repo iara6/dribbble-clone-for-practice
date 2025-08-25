@@ -1,574 +1,535 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dribbble Clone Practice</title>
-  <link rel="stylesheet" href="dribbble-clone.css">
-  <!-- FONTS -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
-   <!-- Font Awesome -->
-  <link rel="stylesheet" 
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <!-- Favicon -->
- <!--  <link href="https://cdn.dribbble.com/assets/favicon-452601365a822699d1d5db718ddf7499d036e8c2f7da69e85160a4d2f83534bd.ico" rel="icon" type="image/x-icon"/> -->
-  <link href="images-icons/favicon.ico" rel="icon" type="image/x-icon">
-</head>
-<body>
-  <header>
-    <div class="header-div">
-      <a class="header-div__logo" href="index.html">
-        <img src="images-icons/svgexport-1.svg" alt="dribbble logo">
-      </a>
-      <nav class="header-div__navigation">
-        <div>
-          <li>
-            Explore
-            <i class="fa-solid fa-chevron-down"></i>
-          </li>
-          <li>
-            Hire a Designer
-            <i class="fa-solid fa-chevron-down"></i>
-          </li>
-          <li>
-            Find Jobs
-          </li>
-          <li>
-            Blog
-          </li>
-        </div>
-      </nav>
-
-      <div class="header-div__action-buttons">
-        <button>
-          Sign up
-        </button>
-        <button>
-          Log in
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <div class="all-content-wrapper">
-    <section class="general-info">
-      <div class="general-info__text">
-        <h1>Discover the <br> World's Top Designers</h1>
-        <h2>Explore work from the most talented and accomplished <br> designers ready to take on your next project.</h2>
-
-        <div>
-          <div class="search-options">
-            <label for="shots">
-              <input type="radio" name="search-option" id="shots" checked>
-              <i class="fa-regular fa-image"></i> Shots
-            </label>
-            <label for="designers">
-              <input type="radio" name="search-option" id="designers">
-              <i class="fa-solid fa-user-group"></i> Designers
-            </label>
-            <label for="services">
-              <input type="radio" name="search-option" id="services">
-              <i class="fa-regular fa-file-lines"></i> Services
-            </label>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dribbble Clone Practice</title>
+    <link rel="stylesheet" href="dribbble-clone.css">
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Favicon -->
+    <!--  <link href="https://cdn.dribbble.com/assets/favicon-452601365a822699d1d5db718ddf7499d036e8c2f7da69e85160a4d2f83534bd.ico" rel="icon" type="image/x-icon"/> -->
+    <link href="images-icons/favicon.ico" rel="icon" type="image/x-icon">
+  </head>
+  <body>
+    <header>
+      <div class="header-div">
+        <a class="header-div__logo" href="index.html">
+          <img src="images-icons/svgexport-1.svg" alt="dribbble logo">
+        </a>
+        <nav class="header-div__navigation">
+          <div>
+            <li>
+              Explore
+              <i class="fa-solid fa-chevron-down"></i>
+            </li>
+            <li>
+              Hire a Designer
+              <i class="fa-solid fa-chevron-down"></i>
+            </li>
+            <li>
+              Find Jobs
+            </li>
+            <li>
+              Blog
+            </li>
           </div>
-          
-          <div class="search-box-wrapper">
-            <input class="search-box-input" placeholder="What type of design are you interested in?" type="search" name="" id="">
-            <div class="search-button">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-            </div>
-          </div>
+        </nav>
 
-          <div class="trending-items-container">
-            <div>
-              Popular:
-            </div>
-            <div class="shots-trends">
-              <a href="#">dashboard</a>
-              <a href="#">landing page</a>
-              <a href="#">e-commerce</a>
-              <a href="#">logo</a>
-              <a href="#">card</a>
-              <a href="#">icons</a>
-            </div>
-            <div class="designers-trends">
-              <a href="#">app design</a>
-              <a href="#">landing page</a>
-              <a href="#">web design</a>
-              <a href="#">dashboard</a>
-              <a href="#">logo design</a>
-              <a href="#">animation</a>
-            </div>
-            <div class="services-trends">
-              <a href="#">branding</a>
-              <a href="#">logo design</a>
-              <a href="#">mobile app</a>
-              <a href="#">illustration</a>
-              <a href="#">animation</a>
-            </div>
-          </div>
+        <div class="header-div__action-buttons">
+          <button>
+            Sign up
+          </button>
+          <button>
+            Log in
+          </button>
         </div>
       </div>
+    </header>
 
-      <div class="general-info__animation">
-        <video class="video-player" src="videos/Dipa-Inhouse.mp4" preload="auto" muted playsinline></video> <!-- autoplay controls preload="auto"-->
-        <button class="play-pause-button">
-          <i class="fa-solid fa-play"></i>
-          <i class="fa-solid fa-pause"></i>
-        </button>
-        <div class="designers-info">
-          <img class="designers-info__img" src="images-icons/Geex-Arts.webp" alt="designers-logo">
-          <span class="designers-info__name">GeexArts</span>
-        </div>
-      </div>
-    </section>
+    <div class="all-content-wrapper">
+      <section class="general-info">
+        <div class="general-info__text">
+          <h1>Discover the <br> World's Top Designers</h1>
+          <h2>Explore work from the most talented and accomplished <br> designers ready to take on your next project.</h2>
 
-    <section class="main-content-wrapper">
-      <nav class="main-content__nav">
-        <div class="main-content__dropdown-btn">
-          <span class="popular-btn">Popular <i class="fa-solid fa-chevron-down popular-chevron-down"></i></span>
-          <ul class="dropdown-btn-options">
-            <li>Popular<i class="fa-solid fa-check"></i></li>
-            <li>New & Noteworthy</li>
-          </ul>
-        </div>
+          <div>
+            <div class="search-options">
+              <label for="shots">
+                <input type="radio" name="search-option" id="shots" checked>
+                <i class="fa-regular fa-image"></i> Shots
+              </label>
+              <label for="designers">
+                <input type="radio" name="search-option" id="designers">
+                <i class="fa-solid fa-user-group"></i> Designers
+              </label>
+              <label for="services">
+                <input type="radio" name="search-option" id="services">
+                <i class="fa-regular fa-file-lines"></i> Services
+              </label>
+            </div>
+            
+            <div class="search-box-wrapper">
+              <input class="search-box-input" placeholder="What type of design are you interested in?" type="search" name="" id="">
+              <div class="search-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              </div>
+            </div>
 
-        <div class="main-content__filter-categories">
-          <li><a href="#">Discover</a></li>
-          <li><a href="#">Animation</a></li>
-          <li><a href="#">Branding</a></li>
-          <li><a href="#">Illustration</a></li>
-          <li><a href="#">Mobile</a></li>
-          <li><a href="#">Print</a></li>
-          <li><a href="#">Product Design</a></li>
-          <li><a href="#">Typography</a></li>
-          <li><a href="#">Web Design</a></li>
-        </div>
-
-        <div class="main-content__filters-btn">
-          <span class="filters-btn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="black" role="img" class="icon filter-icon icon-14"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 6C0 5.17157 0.671573 4.5 1.5 4.5H22.5C23.3284 4.5 24 5.17157 24 6C24 6.82843 23.3284 7.5 22.5 7.5H1.5C0.671573 7.5 0 6.82843 0 6ZM3 12C3 11.1716 3.67157 10.5 4.5 10.5H19.5C20.3284 10.5 21 11.1716 21 12C21 12.8284 20.3284 13.5 19.5 13.5H4.5C3.67157 13.5 3 12.8284 3 12ZM7.5 16.5C6.67157 16.5 6 17.1716 6 18C6 18.8284 6.67157 19.5 7.5 19.5H16.5C17.3284 19.5 18 18.8284 18 18C18 17.1716 17.3284 16.5 16.5 16.5H7.5Z"></path></svg>
-            Filters</span>
-          <div></div>
-        </div>
-      </nav>
-
-      <section class="filters-expandable-section">
-        <div>
-          <label>Tags</label>
-          <div class="filters_input-container">
-            <svg class="small-search-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9e9ea7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-            <input type="text">
-          </div>
-        </div>
-        <div>
-          <label>Color</label>
-          <div class="filters_input-container2">
-            <svg class="color-palette-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 20 21" fill="none" role="img" class="icon ">
-              <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="21">
-                <circle cx="10" cy="10.5" r="10" fill="#C4C4C4"></circle>
-              </mask>
-              <g mask="url(#mask0)">
-                <rect x="10" y="0.5" width="10" height="20" fill="#3A8BBB"></rect>
-                <path d="M20 4.5L10 -2.5V10.5L20 4.5Z" fill="#00B6E3"></path>
-                <path d="M20 16.5L10 24.5V10.5L20 16.5Z" fill="#C142A0"></path>
-                <path d="M0 0.5H10V10.5L0 16.5V0.5Z" fill="#FCC870"></path>
-                <path d="M-7 0.5H10V10.5L-7 0.5Z" fill="#EF875B"></path>
-                <path d="M0 16.5L10 24.5V10.5L0 16.5Z" fill="#FF5555"></path>
-              </g>
-              <circle cx="10" cy="10.5" r="3" fill="#F5F6F7"></circle>
-            </svg>
-            <input class="color-input" type="search" placeholder="Enter hex or select" maxlength="6" autocomplete="off" pattern="([0-9a-fA-F]{6}|[0-9a-fA-F]{3})">
-            <div class="color-palette-container">
-              <ul class="color-options">
-                <li class="color">
-                  <a id="color-faddd1" style="background-color: #faddd1;" href="#">#faddd1</a>
-                </li>
-                <li class="color">
-                  <a id="color-fad3d1" style="background-color: #fad3d1;" href="#">#fad3d1</a>
-                </li>
-                <li class="color">
-                  <a id="color-fad1e6" style="background-color: #fad1e6;" href="#">#fad1e6</a>
-                </li>
-                <li class="color">
-                  <a id="color-e5d1fa" style="background-color: #e5d1fa;" href="#">#e5d1fa</a>
-                </li>
-                <li class="color">
-                  <a id="color-d4d1fa" style="background-color: #d4d1fa;" href="#">#d4d1fa</a>
-                </li>
-                <li class="color">
-                  <a id="color-d1e3fa" style="background-color: #d1e3fa;" href="#">#d1e3fa</a>
-                </li>
-                <li class="color">
-                  <a id="color-d1f3fa" style="background-color: #d1f3fa;" href="#">#d1f3fa</a>
-                </li>
-                <li class="color">
-                  <a id="color-d1faf0" style="background-color: #d1faf0;" href="#">#d1faf0</a>
-                </li>
-                <li class="color">
-                  <a id="color-d1fad7" style="background-color: #d1fad7;" href="#">#d1fad7</a>
-                </li>
-                <li class="color">
-                  <a id="color-ebfad1" style="background-color: #ebfad1;" href="#">#ebfad1</a>
-                </li>
-                <li class="color">
-                  <a id="color-faf9d1" style="background-color: #faf9d1;" href="#">#faf9d1</a>
-                </li>
-                <li class="color">
-                  <a id="color-faefd1" style="background-color: #faefd1;" href="#">#faefd1</a>
-                </li>
-                <li class="color">
-                  <a id="color-fae6d1" style="background-color: #fae6d1;" href="#">#fae6d1</a>
-                </li>
-                <li class="color">
-                  <a id="color-f2e2d9" style="background-color: #f2e2d9;" href="#">#f2e2d9</a>
-                </li>
-                <li class="color">
-                  <a id="color-ffffff" style="background-color: #ffffff;" href="#">#ffffff</a>
-                </li>
-                <li class="color">
-                  <a id="color-f4b69c" style="background-color: #f4b69c;" href="#">#f4b69c</a>
-                </li>
-                <li class="color">
-                  <a id="color-f4a09c" style="background-color: #f4a09c;" href="#">#f4a09c</a>
-                </li>
-                <li class="color">
-                  <a id="color-f49cc8" style="background-color: #f49cc8;" href="#">#f49cc8</a>
-                </li>
-                <li class="color">
-                  <a id="color-c69cf4" style="background-color: #c69cf4;" href="#">#c69cf4</a>
-                </li>
-                <li class="color">
-                  <a id="color-a39cf4" style="background-color: #a39cf4;" href="#">#a39cf4</a>
-                </li>
-                <li class="color">
-                  <a id="color-9cc2f4" style="background-color: #9cc2f4;" href="#">#9cc2f4</a>
-                </li>
-                <li class="color">
-                  <a id="color-9ce5f4" style="background-color: #9ce5f4;" href="#">#9ce5f4</a>
-                </li>
-                <li class="color">
-                  <a id="color-9cf4df" style="background-color: #9cf4df;" href="#">#9cf4df</a>
-                </li>
-                <li class="color">
-                  <a id="color-9cf4a7" style="background-color: #9cf4a7;" href="#">#9cf4a7</a>
-                </li>
-                <li class="color">
-                  <a id="color-d4f49c" style="background-color: #d4f49c;" href="#">#d4f49c</a>
-                </li>
-                <li class="color">
-                  <a id="color-f4f19c" style="background-color: #f4f19c;" href="#">#f4f19c</a>
-                </li>
-                <li class="color">
-                  <a id="color-f4dc9c" style="background-color: #f4dc9c;" href="#">#f4dc9c</a>
-                </li>
-                <li class="color">
-                  <a id="color-f4c89c" style="background-color: #f4c89c;" href="#">#f4c89c</a>
-                </li>
-                <li class="color">
-                  <a id="color-e3c0ac" style="background-color: #e3c0ac;" href="#">#e3c0ac</a>
-                </li>
-                <li class="color">
-                  <a id="color-e4e4e4" style="background-color: #e4e4e4;" href="#">#e4e4e4</a>
-                </li>
-                <li class="color">
-                  <a id="color-ee8f66" style="background-color: #ee8f66;" href="#">#ee8f66</a>
-                </li>
-                <li class="color">
-                  <a id="color-ee6d66" style="background-color: #ee6d66;" href="#">#ee6d66</a>
-                </li>
-                <li class="color">
-                  <a id="color-ee66aa" style="background-color: #ee66aa;" href="#">#ee66aa</a>
-                </li>
-                <li class="color">
-                  <a id="color-a866ee" style="background-color: #a866ee;" href="#">#a866ee</a>
-                </li>
-                <li class="color">
-                  <a id="color-7166ee" style="background-color: #7166ee;" href="#">#7166ee</a>
-                </li>
-                <li class="color">
-                  <a id="color-66a1ee" style="background-color: #66a1ee;" href="#">#66a1ee</a>
-                </li>
-                <li class="color">
-                  <a id="color-66d7ee" style="background-color: #66d7ee;" href="#">#66d7ee</a>
-                </li>
-                <li class="color">
-                  <a id="color-66eece" style="background-color: #66eece;" href="#">#66eece</a>
-                </li>
-                <li class="color">
-                  <a id="color-66ee78" style="background-color: #66ee78;" href="#">#66ee78</a>
-                </li>
-                <li class="color">
-                  <a id="color-bcee66" style="background-color: #bcee66;" href="#">#bcee66</a>
-                </li>
-                <li class="color">
-                  <a id="color-eee966" style="background-color: #eee966;" href="#">#eee966</a>
-                </li>
-                <li class="color">
-                  <a id="color-eeca66" style="background-color: #eeca66;" href="#">#eeca66</a>
-                </li>
-                <li class="color">
-                  <a id="color-eeaa66" style="background-color: #eeaa66;" href="#">#eeaa66</a>
-                </li>
-                <li class="color">
-                  <a id="color-d59f80" style="background-color: #d59f80;" href="#">#d59f80</a>
-                </li>
-                <li class="color">
-                  <a id="color-b4b4b4" style="background-color: #b4b4b4;" href="#">#b4b4b4</a>
-                </li>
-                <li class="color">
-                  <a id="color-e86830" style="background-color: #e86830;" href="#">#e86830</a>
-                </li>
-                <li class="color">
-                  <a id="color-e83a30" style="background-color: #e83a30;" href="#">#e83a30</a>
-                </li>
-                <li class="color">
-                  <a id="color-e8308c" style="background-color: #e8308c;" href="#">#e8308c</a>
-                </li>
-                <li class="color">
-                  <a id="color-8930e8" style="background-color: #8930e8;" href="#">#8930e8</a>
-                </li>
-                <li class="color">
-                  <a id="color-4030e8" style="background-color: #4030e8;" href="#">#4030e8</a>
-                </li>
-                <li class="color">
-                  <a id="color-3080e8" style="background-color: #3080e8;" href="#">#3080e8</a>
-                </li>
-                <li class="color">
-                  <a id="color-30c9e8" style="background-color: #30c9e8;" href="#">#30c9e8</a>
-                </li>
-                <li class="color">
-                  <a id="color-30e8bd" style="background-color: #30e8bd;" href="#">#30e8bd</a>
-                </li>
-                <li class="color">
-                  <a id="color-30e849" style="background-color: #30e849;" href="#">#30e849</a>
-                </li>
-                <li class="color">
-                  <a id="color-a5e830" style="background-color: #a5e830;" href="#">#a5e830</a>
-                </li>
-                <li class="color">
-                  <a id="color-e8e230" style="background-color: #e8e230;" href="#">#e8e230</a>
-                </li>
-                <li class="color">
-                  <a id="color-e8b730" style="background-color: #e8b730;" href="#">#e8b730</a>
-                </li>
-                <li class="color">
-                  <a id="color-e88c30" style="background-color: #e88c30;" href="#">#e88c30</a>
-                </li>
-                <li class="color">
-                  <a id="color-c67d53" style="background-color: #c67d53;" href="#">#c67d53</a>
-                </li>
-                <li class="color">
-                  <a id="color-848484" style="background-color: #848484;" href="#">#848484</a>
-                </li>
-                <li class="color">
-                  <a id="color-c74b16" style="background-color: #c74b16;" href="#">#c74b16</a>
-                </li>
-                <li class="color">
-                  <a id="color-c71f16" style="background-color: #c71f16;" href="#">#c71f16</a>
-                </li>
-                <li class="color">
-                  <a id="color-c7166f" style="background-color: #c7166f;" href="#">#c7166f</a>
-                </li>
-                <li class="color">
-                  <a id="color-6c16c7" style="background-color: #6c16c7;" href="#">#6c16c7</a>
-                </li>
-                <li class="color">
-                  <a id="color-2516c7" style="background-color: #2516c7;" href="#">#2516c7</a>
-                </li>
-                <li class="color">
-                  <a id="color-1663c7" style="background-color: #1663c7;" href="#">#1663c7</a>
-                </li>
-                <li class="color">
-                  <a id="color-16a9c7" style="background-color: #16a9c7;" href="#">#16a9c7</a>
-                </li>
-                <li class="color">
-                  <a id="color-16c79e" style="background-color: #16c79e;" href="#">#16c79e</a>
-                </li>
-                <li class="color">
-                  <a id="color-16c72e" style="background-color: #16c72e;" href="#">#16c72e</a>
-                </li>
-                <li class="color">
-                  <a id="color-86c716" style="background-color: #86c716;" href="#">#86c716</a>
-                </li>
-                <li class="color">
-                  <a id="color-c7c116" style="background-color: #c7c116;" href="#">#c7c116</a>
-                </li>
-                <li class="color">
-                  <a id="color-c79816" style="background-color: #c79816;" href="#">#c79816</a>
-                </li>
-                <li class="color">
-                  <a id="color-c76f16" style="background-color: #c76f16;" href="#">#c76f16</a>
-                </li>
-                <li class="color">
-                  <a id="color-a66037" style="background-color: #a66037;" href="#">#a66037</a>
-                </li>
-                <li class="color">
-                  <a id="color-545454" style="background-color: #545454;" href="#">#545454</a>
-                </li>
-                <li class="color">
-                  <a id="color-913710" style="background-color: #913710;" href="#">#913710</a>
-                </li>
-                <li class="color">
-                  <a id="color-911710" style="background-color: #911710;" href="#">#911710</a>
-                </li>
-                <li class="color">
-                  <a id="color-911051" style="background-color: #911051;" href="#">#911051</a>
-                </li>
-                <li class="color">
-                  <a id="color-4f1091" style="background-color: #4f1091;" href="#">#4f1091</a>
-                </li>
-                <li class="color">
-                  <a id="color-1b1091" style="background-color: #1b1091;" href="#">#1b1091</a>
-                </li>
-                <li class="color">
-                  <a id="color-104891" style="background-color: #104891;" href="#">#104891</a>
-                </li>
-                <li class="color">
-                  <a id="color-107c91" style="background-color: #107c91;" href="#">#107c91</a>
-                </li>
-                <li class="color">
-                  <a id="color-109173" style="background-color: #109173;" href="#">#109173</a>
-                </li>
-                <li class="color">
-                  <a id="color-109121" style="background-color: #109121;" href="#">#109121</a>
-                </li>
-                <li class="color">
-                  <a id="color-629110" style="background-color: #629110;" href="#">#629110</a>
-                </li>
-                <li class="color">
-                  <a id="color-918d10" style="background-color: #918d10;" href="#">#918d10</a>
-                </li>
-                <li class="color">
-                  <a id="color-916f10" style="background-color: #916f10;" href="#">#916f10</a>
-                </li>
-                <li class="color">
-                  <a id="color-915110" style="background-color: #915110;" href="#">#915110</a>
-                </li>
-                <li class="color">
-                  <a id="color-794628" style="background-color: #794628;" href="#">#794628</a>
-                </li>
-                <li class="color">
-                  <a id="color-242424" style="background-color: #242424;" href="#">#242424</a>
-                </li>
-                <li class="color">
-                  <a id="color-5c230a" style="background-color: #5c230a;" href="#">#5c230a</a>
-                </li>
-                <li class="color">
-                  <a id="color-5c0e0a" style="background-color: #5c0e0a;" href="#">#5c0e0a</a>
-                </li>
-                <li class="color">
-                  <a id="color-5c0a33" style="background-color: #5c0a33;" href="#">#5c0a33</a>
-                </li>
-                <li class="color">
-                  <a id="color-320a5c" style="background-color: #320a5c;" href="#">#320a5c</a>
-                </li>
-                <li class="color">
-                  <a id="color-110a5c" style="background-color: #110a5c;" href="#">#110a5c</a>
-                </li>
-                <li class="color">
-                  <a id="color-0a2e5c" style="background-color: #0a2e5c;" href="#">#0a2e5c</a>
-                </li>
-                <li class="color">
-                  <a id="color-0a4e5c" style="background-color: #0a4e5c;" href="#">#0a4e5c</a>
-                </li>
-                <li class="color">
-                  <a id="color-0a5c49" style="background-color: #0a5c49;" href="#">#0a5c49</a>
-                </li>
-                <li class="color">
-                  <a id="color-0a5c15" style="background-color: #0a5c15;" href="#">#0a5c15</a>
-                </li>
-                <li class="color">
-                  <a id="color-3e5c0a" style="background-color: #3e5c0a;" href="#">#3e5c0a</a>
-                </li>
-                <li class="color">
-                  <a id="color-5c590a" style="background-color: #5c590a;" href="#">#5c590a</a>
-                </li>
-                <li class="color">
-                  <a id="color-5c460a" style="background-color: #5c460a;" href="#">#5c460a</a>
-                </li>
-                <li class="color">
-                  <a id="color-5c330a" style="background-color: #5c330a;" href="#">#5c330a</a>
-                </li>
-                <li class="color">
-                  <a id="color-4d2c19" style="background-color: #4d2c19;" href="#">#4d2c19</a>
-                </li>
-                <li class="color">
-                  <a id="color-000000" style="background-color: #000000;" href="#">#000000</a>
-                </li>
-              </ul>
+            <div class="trending-items-container">
+              <div>
+                Popular:
+              </div>
+              <div class="shots-trends">
+                <a href="#">dashboard</a>
+                <a href="#">landing page</a>
+                <a href="#">e-commerce</a>
+                <a href="#">logo</a>
+                <a href="#">card</a>
+                <a href="#">icons</a>
+              </div>
+              <div class="designers-trends">
+                <a href="#">app design</a>
+                <a href="#">landing page</a>
+                <a href="#">web design</a>
+                <a href="#">dashboard</a>
+                <a href="#">logo design</a>
+                <a href="#">animation</a>
+              </div>
+              <div class="services-trends">
+                <a href="#">branding</a>
+                <a href="#">logo design</a>
+                <a href="#">mobile app</a>
+                <a href="#">illustration</a>
+                <a href="#">animation</a>
+              </div>
             </div>
           </div>
         </div>
-        <div>
-          <label>Timeframe</label>
-          <div class="timeframe-options-div">
-            <span class="now-btn">Now <i class="fa-solid fa-chevron-down now-chevron-down"></i></span>
-            <ul class="now-dropdown-btn-options">
-              <li class="active">Now<i class="fa-solid fa-check now-check"></i></li>
-              <li>This Past Week</li>
-              <li>This Past Month</li>
-              <li>This Past Year</li>
-              <li>All Time</li>
-            </ul>
+
+        <div class="general-info__animation">
+          <video class="video-player" src="videos/Dipa-Inhouse.mp4" preload="auto" muted playsinline></video>
+          <button class="play-pause-button">
+            <i class="fa-solid fa-play"></i>
+            <i class="fa-solid fa-pause"></i>
+          </button>
+          <div class="designers-info">
+            <img class="designers-info__img" src="images-icons/Geex-Arts.webp" alt="designers-logo">
+            <span class="designers-info__name">GeexArts</span>
           </div>
         </div>
       </section>
 
-      <main class="main-content__projects-wrapper">
-        <div class="main-content__projects">
-          <ul class="main-content__projects-list">
-            <li>
-              <div class="project-thumbnail-container">
-                <img class="project-img" src="images-icons/project-1.webp" alt="">
+      <section class="main-content-wrapper">
+        <nav class="main-content__nav">
+          <div class="main-content__dropdown-btn">
+            <span class="popular-btn">Popular <i class="fa-solid fa-chevron-down popular-chevron-down"></i></span>
+            <ul class="dropdown-btn-options">
+              <li>Popular<i class="fa-solid fa-check"></i></li>
+              <li>New & Noteworthy</li>
+            </ul>
+          </div>
+
+          <div class="main-content__filter-categories">
+            <li><a href="#">Discover</a></li>
+            <li><a href="#">Animation</a></li>
+            <li><a href="#">Branding</a></li>
+            <li><a href="#">Illustration</a></li>
+            <li><a href="#">Mobile</a></li>
+            <li><a href="#">Print</a></li>
+            <li><a href="#">Product Design</a></li>
+            <li><a href="#">Typography</a></li>
+            <li><a href="#">Web Design</a></li>
+          </div>
+
+          <div class="main-content__filters-btn">
+            <span class="filters-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="black" role="img" class="icon filter-icon icon-14"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 6C0 5.17157 0.671573 4.5 1.5 4.5H22.5C23.3284 4.5 24 5.17157 24 6C24 6.82843 23.3284 7.5 22.5 7.5H1.5C0.671573 7.5 0 6.82843 0 6ZM3 12C3 11.1716 3.67157 10.5 4.5 10.5H19.5C20.3284 10.5 21 11.1716 21 12C21 12.8284 20.3284 13.5 19.5 13.5H4.5C3.67157 13.5 3 12.8284 3 12ZM7.5 16.5C6.67157 16.5 6 17.1716 6 18C6 18.8284 6.67157 19.5 7.5 19.5H16.5C17.3284 19.5 18 18.8284 18 18C18 17.1716 17.3284 16.5 16.5 16.5H7.5Z"></path></svg>
+              Filters</span>
+            <div></div>
+          </div>
+        </nav>
+
+        <section class="filters-expandable-section">
+          <div>
+            <label>Tags</label>
+            <div class="filters_input-container">
+              <svg class="small-search-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9e9ea7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              <input type="text">
+            </div>
+          </div>
+          <div>
+            <label>Color</label>
+            <div class="filters_input-container2">
+              <svg class="color-palette-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 20 21" fill="none" role="img" class="icon ">
+                <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="21">
+                  <circle cx="10" cy="10.5" r="10" fill="#C4C4C4"></circle>
+                </mask>
+                <g mask="url(#mask0)">
+                  <rect x="10" y="0.5" width="10" height="20" fill="#3A8BBB"></rect>
+                  <path d="M20 4.5L10 -2.5V10.5L20 4.5Z" fill="#00B6E3"></path>
+                  <path d="M20 16.5L10 24.5V10.5L20 16.5Z" fill="#C142A0"></path>
+                  <path d="M0 0.5H10V10.5L0 16.5V0.5Z" fill="#FCC870"></path>
+                  <path d="M-7 0.5H10V10.5L-7 0.5Z" fill="#EF875B"></path>
+                  <path d="M0 16.5L10 24.5V10.5L0 16.5Z" fill="#FF5555"></path>
+                </g>
+                <circle cx="10" cy="10.5" r="3" fill="#F5F6F7"></circle>
+              </svg>
+              <input class="color-input" type="search" placeholder="Enter hex or select" maxlength="6" autocomplete="off" pattern="([0-9a-fA-F]{6}|[0-9a-fA-F]{3})">
+              <div class="color-palette-container">
+                <ul class="color-options">
+                  <li class="color">
+                    <a id="color-faddd1" style="background-color: #faddd1;" href="#">#faddd1</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-fad3d1" style="background-color: #fad3d1;" href="#">#fad3d1</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-fad1e6" style="background-color: #fad1e6;" href="#">#fad1e6</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-e5d1fa" style="background-color: #e5d1fa;" href="#">#e5d1fa</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-d4d1fa" style="background-color: #d4d1fa;" href="#">#d4d1fa</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-d1e3fa" style="background-color: #d1e3fa;" href="#">#d1e3fa</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-d1f3fa" style="background-color: #d1f3fa;" href="#">#d1f3fa</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-d1faf0" style="background-color: #d1faf0;" href="#">#d1faf0</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-d1fad7" style="background-color: #d1fad7;" href="#">#d1fad7</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-ebfad1" style="background-color: #ebfad1;" href="#">#ebfad1</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-faf9d1" style="background-color: #faf9d1;" href="#">#faf9d1</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-faefd1" style="background-color: #faefd1;" href="#">#faefd1</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-fae6d1" style="background-color: #fae6d1;" href="#">#fae6d1</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-f2e2d9" style="background-color: #f2e2d9;" href="#">#f2e2d9</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-ffffff" style="background-color: #ffffff;" href="#">#ffffff</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-f4b69c" style="background-color: #f4b69c;" href="#">#f4b69c</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-f4a09c" style="background-color: #f4a09c;" href="#">#f4a09c</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-f49cc8" style="background-color: #f49cc8;" href="#">#f49cc8</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-c69cf4" style="background-color: #c69cf4;" href="#">#c69cf4</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-a39cf4" style="background-color: #a39cf4;" href="#">#a39cf4</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-9cc2f4" style="background-color: #9cc2f4;" href="#">#9cc2f4</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-9ce5f4" style="background-color: #9ce5f4;" href="#">#9ce5f4</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-9cf4df" style="background-color: #9cf4df;" href="#">#9cf4df</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-9cf4a7" style="background-color: #9cf4a7;" href="#">#9cf4a7</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-d4f49c" style="background-color: #d4f49c;" href="#">#d4f49c</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-f4f19c" style="background-color: #f4f19c;" href="#">#f4f19c</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-f4dc9c" style="background-color: #f4dc9c;" href="#">#f4dc9c</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-f4c89c" style="background-color: #f4c89c;" href="#">#f4c89c</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-e3c0ac" style="background-color: #e3c0ac;" href="#">#e3c0ac</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-e4e4e4" style="background-color: #e4e4e4;" href="#">#e4e4e4</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-ee8f66" style="background-color: #ee8f66;" href="#">#ee8f66</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-ee6d66" style="background-color: #ee6d66;" href="#">#ee6d66</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-ee66aa" style="background-color: #ee66aa;" href="#">#ee66aa</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-a866ee" style="background-color: #a866ee;" href="#">#a866ee</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-7166ee" style="background-color: #7166ee;" href="#">#7166ee</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-66a1ee" style="background-color: #66a1ee;" href="#">#66a1ee</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-66d7ee" style="background-color: #66d7ee;" href="#">#66d7ee</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-66eece" style="background-color: #66eece;" href="#">#66eece</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-66ee78" style="background-color: #66ee78;" href="#">#66ee78</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-bcee66" style="background-color: #bcee66;" href="#">#bcee66</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-eee966" style="background-color: #eee966;" href="#">#eee966</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-eeca66" style="background-color: #eeca66;" href="#">#eeca66</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-eeaa66" style="background-color: #eeaa66;" href="#">#eeaa66</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-d59f80" style="background-color: #d59f80;" href="#">#d59f80</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-b4b4b4" style="background-color: #b4b4b4;" href="#">#b4b4b4</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-e86830" style="background-color: #e86830;" href="#">#e86830</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-e83a30" style="background-color: #e83a30;" href="#">#e83a30</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-e8308c" style="background-color: #e8308c;" href="#">#e8308c</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-8930e8" style="background-color: #8930e8;" href="#">#8930e8</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-4030e8" style="background-color: #4030e8;" href="#">#4030e8</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-3080e8" style="background-color: #3080e8;" href="#">#3080e8</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-30c9e8" style="background-color: #30c9e8;" href="#">#30c9e8</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-30e8bd" style="background-color: #30e8bd;" href="#">#30e8bd</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-30e849" style="background-color: #30e849;" href="#">#30e849</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-a5e830" style="background-color: #a5e830;" href="#">#a5e830</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-e8e230" style="background-color: #e8e230;" href="#">#e8e230</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-e8b730" style="background-color: #e8b730;" href="#">#e8b730</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-e88c30" style="background-color: #e88c30;" href="#">#e88c30</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-c67d53" style="background-color: #c67d53;" href="#">#c67d53</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-848484" style="background-color: #848484;" href="#">#848484</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-c74b16" style="background-color: #c74b16;" href="#">#c74b16</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-c71f16" style="background-color: #c71f16;" href="#">#c71f16</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-c7166f" style="background-color: #c7166f;" href="#">#c7166f</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-6c16c7" style="background-color: #6c16c7;" href="#">#6c16c7</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-2516c7" style="background-color: #2516c7;" href="#">#2516c7</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-1663c7" style="background-color: #1663c7;" href="#">#1663c7</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-16a9c7" style="background-color: #16a9c7;" href="#">#16a9c7</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-16c79e" style="background-color: #16c79e;" href="#">#16c79e</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-16c72e" style="background-color: #16c72e;" href="#">#16c72e</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-86c716" style="background-color: #86c716;" href="#">#86c716</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-c7c116" style="background-color: #c7c116;" href="#">#c7c116</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-c79816" style="background-color: #c79816;" href="#">#c79816</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-c76f16" style="background-color: #c76f16;" href="#">#c76f16</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-a66037" style="background-color: #a66037;" href="#">#a66037</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-545454" style="background-color: #545454;" href="#">#545454</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-913710" style="background-color: #913710;" href="#">#913710</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-911710" style="background-color: #911710;" href="#">#911710</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-911051" style="background-color: #911051;" href="#">#911051</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-4f1091" style="background-color: #4f1091;" href="#">#4f1091</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-1b1091" style="background-color: #1b1091;" href="#">#1b1091</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-104891" style="background-color: #104891;" href="#">#104891</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-107c91" style="background-color: #107c91;" href="#">#107c91</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-109173" style="background-color: #109173;" href="#">#109173</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-109121" style="background-color: #109121;" href="#">#109121</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-629110" style="background-color: #629110;" href="#">#629110</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-918d10" style="background-color: #918d10;" href="#">#918d10</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-916f10" style="background-color: #916f10;" href="#">#916f10</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-915110" style="background-color: #915110;" href="#">#915110</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-794628" style="background-color: #794628;" href="#">#794628</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-242424" style="background-color: #242424;" href="#">#242424</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-5c230a" style="background-color: #5c230a;" href="#">#5c230a</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-5c0e0a" style="background-color: #5c0e0a;" href="#">#5c0e0a</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-5c0a33" style="background-color: #5c0a33;" href="#">#5c0a33</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-320a5c" style="background-color: #320a5c;" href="#">#320a5c</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-110a5c" style="background-color: #110a5c;" href="#">#110a5c</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-0a2e5c" style="background-color: #0a2e5c;" href="#">#0a2e5c</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-0a4e5c" style="background-color: #0a4e5c;" href="#">#0a4e5c</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-0a5c49" style="background-color: #0a5c49;" href="#">#0a5c49</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-0a5c15" style="background-color: #0a5c15;" href="#">#0a5c15</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-3e5c0a" style="background-color: #3e5c0a;" href="#">#3e5c0a</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-5c590a" style="background-color: #5c590a;" href="#">#5c590a</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-5c460a" style="background-color: #5c460a;" href="#">#5c460a</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-5c330a" style="background-color: #5c330a;" href="#">#5c330a</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-4d2c19" style="background-color: #4d2c19;" href="#">#4d2c19</a>
+                  </li>
+                  <li class="color">
+                    <a id="color-000000" style="background-color: #000000;" href="#">#000000</a>
+                  </li>
+                </ul>
               </div>
-              <div class="designer-information">
-                <div class="designer-information__ava-name-badge">
-                  <img class="designer-avatar" src="images-icons/icon-1.webp" alt="">
-                  <span class="designer-name">
-                    HALO LAB
-                  </span>
-                  <a class="designer-badge" href="#">team</a>
-                </div>
-                <div class="designer-information__stats">
-                  <div class="likes">
-                    <div class="likes-icon-container" title="Like this shot">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" role="img" class="icon fill-current shot-tools-icon">
-                        <path d="M10.7408 2C13.0889 2 14.6667 4.235 14.6667 6.32C14.6667 10.5425 8.11856 14 8.00004 14C7.88152 14 1.33337 10.5425 1.33337 6.32C1.33337 4.235 2.91115 2 5.2593 2C6.60745 2 7.48893 2.6825 8.00004 3.2825C8.51115 2.6825 9.39263 2 10.7408 2Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                      </svg>
-                    </div>
-                    <span class="likes-count">
-                      74
-                    </span>
-                  </div>
-                  <div class="views">
-                    <div class="views-icon-container">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" role="img" class="icon fill-current shot-tools-icon">
-                        <path d="M8 3C4.36992 3 1.98789 6.21774 1.18763 7.49059C1.09079 7.64462 1.04237 7.72163 1.01527 7.84042C0.99491 7.92964 0.99491 8.07036 1.01527 8.15958C1.04237 8.27837 1.09079 8.35539 1.18763 8.50941C1.98789 9.78226 4.36992 13 8 13C11.6301 13 14.0121 9.78226 14.8124 8.50941L14.8124 8.50939C14.9092 8.35538 14.9576 8.27837 14.9847 8.15958C15.0051 8.07036 15.0051 7.92964 14.9847 7.84042C14.9576 7.72163 14.9092 7.64462 14.8124 7.4906L14.8124 7.49059C14.0121 6.21774 11.6301 3 8 3Z" fill="currentColor"></path>
-                        <path d="M8 10C9.10457 10 10 9.10457 10 8C10 6.89543 9.10457 6 8 6C6.89543 6 6 6.89543 6 8C6 9.10457 6.89543 10 8 10Z" fill="white"></path>
-                      </svg>
-                    </div>
-                    <span class="views-count">
-                      3.1k
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </li>
-        
-          </ul>
+            </div>
+          </div>
+          <div>
+            <label>Timeframe</label>
+            <div class="timeframe-options-div">
+              <span class="now-btn">Now <i class="fa-solid fa-chevron-down now-chevron-down"></i></span>
+              <ul class="now-dropdown-btn-options">
+                <li class="active">Now<i class="fa-solid fa-check now-check"></i></li>
+                <li>This Past Week</li>
+                <li>This Past Month</li>
+                <li>This Past Year</li>
+                <li>All Time</li>
+              </ul>
+            </div>
+          </div>
+        </section>
 
-        </div>
-      </main>
+        <main class="main-content__projects-wrapper">
+          <div class="main-content__projects">
+            <ul class="main-content__projects-list">
+              <!-- <li>
+                GENERATED IN JS
+              </li> -->
+            </ul>
+          </div>
+        </main>
 
-
-    </section>
-
-  </div>
-  
-  <script  type="module" src="dribbble-clone.js"></script>
-  
-</body>
+      </section>
+    </div>
+    
+    <script  type="module" src="dribbble-clone.js"></script>
+  </body>
 </html>
