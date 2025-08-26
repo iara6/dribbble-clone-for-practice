@@ -626,17 +626,42 @@ input[type="search"]:focus  {
   list-style: none;
 }
 
-.project-img {
-  width: 100%;
+.project-thumbnail-container,
+.designer-information__ava-name {
+  cursor: pointer;
+}
+.project-thumbnail-container {
+  position: relative;
   border-radius: 8px;
+  overflow: hidden;
 }
 
+.project-img {
+  width: 100%;
+ /*  border-radius: 8px; */
+  display: block;
+}
+
+.project-img-shadow {
+  position: absolute;
+  inset: 0;
+  border-radius: 8px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 35%);
+ 
+  /* pointer-events: none; */
+}
 .designer-information {
   display: flex;
   justify-content: space-between;
+  margin-top: 8px;
 }
 
 .designer-information__ava-name-badge {
+  display: flex;
+  align-items: center;
+}
+
+.designer-information__ava-name-badge div {
   display: flex;
   align-items: center;
 }

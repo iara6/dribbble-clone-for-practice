@@ -272,13 +272,16 @@ function displayProjects(projects) {
     return `<li>
               <div class="project-thumbnail-container">
                 <img class="project-img" src="images-icons/project-${project.id}.webp" alt="">
+                <span class="project-img-shadow"></span>
               </div>
               <div class="designer-information">
                 <div class="designer-information__ava-name-badge">
-                  <img class="designer-avatar" src="images-icons/icon-${project.id}.webp" alt="">
-                  <span class="designer-name">
-                    ${project.designerName}
-                  </span>
+                  <div class="designer-information__ava-name">
+                    <img class="designer-avatar" src="images-icons/icon-${project.id}.webp" alt="">
+                    <span class="designer-name">
+                      ${project.designerName}
+                    </span>
+                  </div>
                   <a class="designer-badge" href="#">${project.account}</a>
                 </div>
                 <div class="designer-information__stats">
