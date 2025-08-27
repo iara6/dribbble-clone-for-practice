@@ -272,7 +272,14 @@ function displayProjects(projects) {
     return `<li>
               <div class="project-thumbnail-container">
                 <img class="project-img" src="images-icons/project-${project.id}.webp" alt="">
-                <span class="project-img-shadow"></span>
+                <span class="project-img-shadow">
+                  <div class="project-img-shadow__info">
+                    <div class="project-name">Kreatank logo 5.0</div>
+                    <div class="project-buttons">
+
+                    </div>
+                  </div>
+                </span>
               </div>
               <div class="designer-information">
                 <div class="designer-information__ava-name-badge">

@@ -647,8 +647,12 @@ input[type="search"]:focus  {
   inset: 0;
   border-radius: 8px;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 35%);
- 
   /* pointer-events: none; */
+}
+/* text-overflow: ellipsis; */
+.project-img-shadow__info {
+  border: 1px solid green;
+  display: flex;
 }
 .designer-information {
   display: flex;
