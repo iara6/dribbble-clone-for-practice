@@ -31,7 +31,7 @@ body {
   display: flex;
 }
 
-.header-div__navigation li {
+.header-div__navigation .header-div__option {
   padding-inline: 1rem;
   cursor: pointer;
   text-wrap: nowrap;
@@ -42,11 +42,55 @@ body {
   margin-left: 3px;
 }
 
-.header-div li {
-  list-style: none;
-  font-weight: 600;
+.header-div__expandable {
+  position: absolute;
+  background-color: white;
+  z-index: 100;
+  border: 1px solid goldenrod;
+  margin-top: 1rem;
+  padding: 1.5rem;
+  width: fit-content;
+
+}
+.header-div__expandable li {
+  display: flex;
+  align-items: center;
+  /* font-weight: 450 !important; */
+  text-align: left;
+  line-height: 17px;
+  border: 1px solid red;
+  font-size: 0.875rem;
+}
+.header-div__expandable li:first-child {
+  padding-bottom: 0.75rem;
+}
+.header-div__expandable li:not(:first-child) {
+  padding: 0.75rem 0;
 }
 
+.header-div__navigation span {
+  position: relative;
+}
+
+.header-div__expandable svg {
+  margin-right: 8px;
+  /* height: 1.3rem; */
+}
+
+.header-div__expandable .divider {
+  border-bottom: 1px solid rgb(6, 3, 24);
+  width: 100%;
+}
+
+
+
+.header-div li {
+  list-style: none;
+ 
+}
+.header-div span {
+  font-weight: 600;
+}
 .header-div__action-buttons {
   margin-left: auto;
 }
@@ -74,7 +118,7 @@ body {
 }
 
 .header-div button:first-child:hover,
-.header-div__navigation li:hover {
+.header-div__navigation span:hover {
   color: rgb(108, 108, 114);
 }
 
