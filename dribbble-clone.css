@@ -33,8 +33,20 @@ body {
 
 .header-div__navigation .header-div__option {
   padding-inline: 1rem;
-  cursor: pointer;
+  /* cursor: pointer; */
   text-wrap: nowrap;
+  position: relative;
+}
+.header-div__option span {
+  cursor: pointer;
+  line-height: 1.875rem; /* 30px */
+}
+.header-div__option-1 {
+  border: 1px solid red;
+}
+.header-div__option-1:hover .header-div__expandable-explore  {
+  opacity: 1;
+  visibility: visible;
 }
 
 .header-div__navigation i {
@@ -49,23 +61,38 @@ body {
   border: 1px solid goldenrod;
   margin-top: 1rem;
   padding: 1.5rem;
-  width: fit-content;
-
+  left: 0;
+  top: 50%;  
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 300ms ease;
 }
 .header-div__expandable li {
   display: flex;
   align-items: center;
-  /* font-weight: 450 !important; */
   text-align: left;
   line-height: 17px;
+  padding-right: 0.8rem !important;
   border: 1px solid red;
   font-size: 0.875rem;
+  cursor: pointer;
 }
 .header-div__expandable li:first-child {
   padding-bottom: 0.75rem;
+ 
+}
+.header-div__expandable li:first-child,
+.header-div__expandable li:nth-child(2) {
+  font-weight: 550;
+}
+.header-div__expandable li:last-child {
+  padding-bottom: 0 !important;
 }
 .header-div__expandable li:not(:first-child) {
   padding: 0.75rem 0;
+}
+.header-div__expandable li:hover {
+  color: rgb(108, 108, 114);
 }
 
 .header-div__navigation span {
