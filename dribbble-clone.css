@@ -492,12 +492,13 @@ input[type="search"]:focus  {
   justify-content: space-between;
 }
 
-.dropdown-btn-options li:last-child,
-.now-dropdown-btn-options li/* :not(:first-child) */ {
+.dropdown-btn-options li,
+.now-dropdown-btn-options li {
   color: rgb(61, 61, 78);
 }
 
-.now-dropdown-btn-options li.active {
+.now-dropdown-btn-options li.active,
+.dropdown-btn-options li.active {
   color: rgb(13, 12, 34);
   font-weight: 550;
 }

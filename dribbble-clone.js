@@ -145,17 +145,35 @@ const optionsBtn = document.querySelector('.popular-btn');
 const dropdownOptions = document.querySelector('.dropdown-btn-options');
 const chevronDown = document.querySelector('.popular-chevron-down');
 
-optionsBtn.addEventListener('click', () => {
+function hidePopularOptions() {
   const isVisible = dropdownOptions.style.display === "block";
   dropdownOptions.style.display = isVisible ? "none" : "block";
   chevronDown.style.transform = isVisible ? "rotate(0deg)" : "rotate(180deg)";
-});
+}
+
+optionsBtn.addEventListener('click', hidePopularOptions);
 
 window.addEventListener('click', (e) => {
   if ((!optionsBtnContainer.contains(e.target))) {
     dropdownOptions.style.display = "none";
     chevronDown.style.transform = "rotate(0deg)";
   }
+});
+
+const dropdownOptionsLi = document.querySelectorAll('.dropdown-btn-options li');
+const checkPopular = document.querySelector('.popular-check');
+
+dropdownOptionsLi.forEach((option) => {
+  option.addEventListener('click', () => {
+    optionsBtn.textContent = option.textContent + '';
+    optionsBtn.appendChild(chevronDown);
+
+    dropdownOptionsLi.forEach(opt => opt.classList.remove('active'));
+    option.classList.add('active');
+    option.appendChild(checkPopular);
+
+    hidePopularOptions();
+  });
 });
 
 
@@ -184,14 +202,12 @@ window.addEventListener('click', (e) => {
 });
 
 const nowDropdownOptions = document.querySelectorAll('.now-dropdown-btn-options li');
-const chevronNow = document.querySelector('.now-chevron-down');
 const checkNow = document.querySelector('.now-check');
-
 
 nowDropdownOptions.forEach((option) => {
   option.addEventListener('click', () => {
     nowBtn.textContent = option.textContent + '';
-    nowBtn.appendChild(chevronNow);
+    nowBtn.appendChild(nowChevronDown);
 
     nowDropdownOptions.forEach(opt => opt.classList.remove('active'));
     option.classList.add('active');
@@ -298,7 +314,7 @@ function displayProjects(projects) {
                       ${project.designerName}
                     </span>
                   </div>
-                  <a class="designer-badge" href="#">${project.account}</a>
+                  ${project.account ? `<a class="designer-badge" href="#">${project.account}</a>` : ''}
                 </div>
                 <div class="designer-information__stats">
                   <div class="likes">
