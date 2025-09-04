@@ -1,4 +1,4 @@
-import {designProjects} from './design-projects.js';
+import {designProjects, designProjectsNew} from './design-projects.js';
 
 
 /****************************************
@@ -166,6 +166,13 @@ const checkPopular = document.querySelector('.popular-check');
 dropdownOptionsLi.forEach((option) => {
   option.addEventListener('click', () => {
     optionsBtn.textContent = option.textContent + '';
+
+    if (optionsBtn.textContent.includes("New")) {
+      displayProjects(designProjectsNew);
+    } else {
+      displayProjects(designProjects);
+    };
+    
     optionsBtn.appendChild(chevronDown);
 
     dropdownOptionsLi.forEach(opt => opt.classList.remove('active'));
@@ -287,10 +294,10 @@ function displayProjects(projects) {
   let displayMainContent = projects.map((project) => {
     return `<li>
               <div class="project-thumbnail-container">
-                <img class="project-img" src="images-icons/project-${project.id}.webp" alt="">
+                <img class="project-img" src="${project.project}" alt="">
                 <span class="project-img-shadow">
                   <div class="project-img-shadow__info">
-                    <div class="project-name">Kreatank logo 5.0 gfdgfdhf dhfdhfdh</div>
+                    <div class="project-name">${project.projectName}</div>
                     <div class="project-buttons">
                       <div class="bookmark-btn" title="Save shot">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" role="img" class="icon ">
