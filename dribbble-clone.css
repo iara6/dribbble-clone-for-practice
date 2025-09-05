@@ -363,7 +363,9 @@ input[type="search"] {
 input[type="search"]:focus  {
   outline: solid 2px rgb(216, 112, 147, 0.2);
 }
-
+.search-box-input:focus ~ .search-box__suggestions-div  {
+  display: block;
+}
 .search-button {
   background-color: rgb(234, 76, 137);
   height: 40px;
@@ -473,7 +475,7 @@ input[type="search"]:focus  {
 .main-content-wrapper {
   padding-inline: 4.5rem;
   color: rgb(13, 12, 34);
-  margin-top: 2rem;
+  margin-top: 2.4rem;
 }
 
 .main-content__nav {
@@ -914,4 +916,27 @@ input[type="search"]:focus  {
 .likes-count,
 .views-count {
   margin-left: 4px;
+}
+
+.sign-up-to-continue {
+  margin-top: 3.5rem;
+  text-align: center;
+}
+
+.sign-up-to-continue button {
+  height: 2.4rem;
+  padding-inline: 1.1rem;
+  font-weight: 600;
+  font-size: 0.85rem;
+  border: none;
+  border-radius: 1.2rem;
+  text-wrap: nowrap;
+  cursor: pointer;
+  transition: all 100ms linear;
+  background-color: rgb(13, 12, 34);
+  color: white;
+}
+
+.sign-up-to-continue button:hover {
+  background-color: rgb(71, 71, 81);
 }
