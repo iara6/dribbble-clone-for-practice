@@ -4,6 +4,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+} 
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -753,6 +757,7 @@ input[type="search"]:focus  {
 }
 
 .main-content__projects-wrapper {
+  position: relative;
   padding: 2rem 0 2.5rem;
   width: 100%;
 }
@@ -939,4 +944,25 @@ input[type="search"]:focus  {
 
 .sign-up-to-continue button:hover {
   background-color: rgb(71, 71, 81);
+}
+
+.back-to-top-button {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  width: 50px;
+  filter: opacity(40%);
+  transition: all 100ms linear;
+
+  opacity: 0;
+  visibility: hidden;
+}
+
+.back-to-top-button:hover {
+  filter: opacity(100%);
+}
+
+.back-to-top-button img {
+  height: 50px;
+  width: 50px;
 }
