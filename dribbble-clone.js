@@ -370,3 +370,12 @@ function btnVisibleOnScroll() {
 };
 
 window.addEventListener('scroll', btnVisibleOnScroll);
+
+/****************
+  COPYRIGHT DATE
+****************/
+
+const copyrightDate = document.querySelector('.copyright-date');
+
+copyrightDate.innerHTML = new Date().getFullYear();
+
