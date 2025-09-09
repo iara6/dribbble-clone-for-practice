@@ -20,12 +20,69 @@ body {
   display: flex;
   align-items: center;
   font-size: 0.875rem;
+
+  /* column-gap: 1rem;  *//* add class */
 }
 
 .header-div__logo img {
   height: 25px;
   margin-right: 1.5rem;
 }
+
+.header-div__search-box-wrapper {
+  max-width: 32.5rem; /* 520px */
+  position: relative;
+  flex: 1;
+  margin-left: 1rem;
+}
+
+.header-div__search-box-wrapper input {
+ /*  width: 100% !important; */
+}
+.shots-btn {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 9.4px;
+  right: 3.4rem;
+  font-weight: 500;
+  border: 1px solid red; /*  */
+  border-radius: 8px;
+  padding: 0.4rem;
+  cursor: pointer;
+}
+
+.shots-btn:hover {
+  color: rgb(123, 113, 148);
+}
+
+.shots-btn-options {
+  /* display: none; */
+  position: absolute;
+  top: 3rem;
+  right: -1.6rem;
+  z-index: 10;
+
+  background-color: white;
+  list-style: none;
+  font-weight: 450;
+  /* font-size: 0.75rem; */
+  border: 1px solid blue;
+  border-radius: 8px;
+  padding: 0.75rem;
+  width: 9.375rem; /* 150px */
+}
+.shots-btn-options li {
+  padding: 0.75rem;
+  line-height: 1.1;
+}
+.shots-chevron-down {
+  font-size: 0.6rem;
+  margin-left: 0.4rem;
+  transition: transform 170ms linear;
+  margin-bottom: -3px;
+}
+
 
 .header-div__navigation {
   margin-left: 1.5rem;
@@ -160,6 +217,7 @@ body {
   padding-inline: 1.5rem;
   font-weight: 700;
   font-size: 0.9rem;
+  letter-spacing: -0.3px;
   border: none;
   border-radius: 2rem;
   text-wrap: nowrap;
@@ -169,6 +227,7 @@ body {
 
 .header-div button:first-child {
   background-color: transparent;
+  padding-inline: 1rem;
   color: black;
 }
 
@@ -367,7 +426,8 @@ input[type="search"] {
 input[type="search"]:focus  {
   outline: solid 2px rgb(216, 112, 147, 0.2);
 }
-.search-box-input:focus ~ .search-box__suggestions-div  {
+.search-box-input:focus ~ .search-box__suggestions-div,
+.header-div__search-box-input:focus ~ .search-box__suggestions-div {
   display: block;
 }
 .search-button {
