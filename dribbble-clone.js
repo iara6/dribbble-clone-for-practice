@@ -1,5 +1,52 @@
 import {designProjects, designProjectsNew} from './design-projects.js';
 
+/* const navbar = document.getElementById("nav");
+const topLink = document.querySelector(".top-link");
+
+window.addEventListener("scroll", () => {
+  // console.log(window.pageYOffset);
+  const scrollHeight = window.pageYOffset;
+  const navHeight = navbar.getBoundingClientRect().height;
+  // console.log(navHeight); // 102
+
+  if (scrollHeight > navHeight) {
+    navbar.classList.add("fixed-nav");
+  } else {
+    navbar.classList.remove("fixed-nav");
+  }
+
+  if (scrollHeight > 500) {
+    topLink.classList.add("show-link")
+  } else {
+    topLink.classList.remove("show-link");
+  }
+}); */
+
+/* Uncaught (in promise) AbortError: The play() request was interrupted because video-only background media was paused to save power. */
+
+/************************************
+ FIXED HEADER + SEARCH BOX on scroll
+*************************************/
+
+const header = document.querySelector('.header');
+const allContentWrapper = document.querySelector('.all-content-wrapper');
+const headerSearchBox = document.querySelector('.header-div__search-box-wrapper');
+
+window.addEventListener('scroll', () => {
+  const scrollHeight = window.pageYOffset;
+  console.log(scrollHeight);
+  
+  if (scrollHeight > 450) {
+    header.classList.add('fixed-header');
+    allContentWrapper.classList.add('paddind-top');
+    headerSearchBox.classList.add('display-search-box');
+  } else {
+    header.classList.remove('fixed-header');
+    allContentWrapper.classList.remove('paddind-top');
+    headerSearchBox.classList.remove('display-search-box');
+  }
+});
+
 
 /****************************************
  SEARCH BOX PLACEHOLDER AND TRENDS LINKS 
@@ -45,14 +92,6 @@ changePlaceholder();
 /*********************************
  SEARCH BOX SHOTS(options) button 
 **********************************/
-/*  <div class="header-div__dropdown-btn">
-      <span class="shots-btn">Shots <i class="fa-solid fa-chevron-down shots-chevron-down"></i></span>
-      <ul class="shots-btn-options">
-        <li>Shots</li>
-        <li>Designers</li>
-        <li>Services</li>
-      </ul>
-    </div> */
 
 const dropdownBtnContainer = document.querySelector('.header-div__dropdown-btn');
 const shotsBtn = document.querySelector('.shots-btn');
