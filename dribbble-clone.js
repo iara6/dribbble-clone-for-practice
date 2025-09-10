@@ -3,7 +3,7 @@ import {designProjects, designProjectsNew} from './design-projects.js';
 
 /****************************************
  SEARCH BOX PLACEHOLDER AND TRENDS LINKS 
- ****************************************/
+*****************************************/
 
 const searchInput = document.querySelector('.search-box-input');
 const shots = document.getElementById('shots');
@@ -41,6 +41,53 @@ services.addEventListener('change', changePlaceholder);
 
 changePlaceholder();
 
+
+/*********************************
+ SEARCH BOX SHOTS(options) button 
+**********************************/
+/*  <div class="header-div__dropdown-btn">
+      <span class="shots-btn">Shots <i class="fa-solid fa-chevron-down shots-chevron-down"></i></span>
+      <ul class="shots-btn-options">
+        <li>Shots</li>
+        <li>Designers</li>
+        <li>Services</li>
+      </ul>
+    </div> */
+
+const dropdownBtnContainer = document.querySelector('.header-div__dropdown-btn');
+const shotsBtn = document.querySelector('.shots-btn');
+const shotsDropdownOptions = document.querySelector('.shots-btn-options');
+const shotsChevronDown = document.querySelector('.shots-chevron-down');
+
+function hideDropdownOptions() {
+  const isVisible = shotsDropdownOptions.style.display === "block";
+  shotsDropdownOptions.style.display = isVisible ? "none" : "block";
+  shotsChevronDown.style.transform = isVisible ? "rotate(0deg)" : "rotate(180deg)";
+};
+
+shotsBtn.addEventListener('click', hideDropdownOptions);
+
+window.addEventListener('click', (e) => {
+  if (!dropdownBtnContainer.contains(e.target)) {
+    shotsDropdownOptions.style.display = "none";
+    shotsChevronDown.style.transform = "rotate(0deg)";
+  }
+});
+
+const shotsDropdownOptionsLi = document.querySelectorAll('.shots-btn-options li');
+
+shotsDropdownOptionsLi.forEach((option) => {
+  option.addEventListener('click', () => {
+    shotsBtn.textContent = option.textContent;
+
+    shotsBtn.appendChild(shotsChevronDown);
+
+    shotsDropdownOptionsLi.forEach(opt => opt.classList.remove('active'));
+    option.classList.add('active');
+
+    hideDropdownOptions();
+  });
+});
 
 /******************************
   VIDEOPLAYER CLIPS with INFO 
@@ -126,7 +173,7 @@ playPauseBtn.addEventListener('click', () => {
 
 /***************************** 
   DISPLAY/HIDE filter section 
- *****************************/
+******************************/
 
 const filtersBtn = document.querySelector('.filters-btn');
 const filtersExpandableSection = document.querySelector('.filters-expandable-section');
@@ -149,12 +196,12 @@ function hidePopularOptions() {
   const isVisible = dropdownOptions.style.display === "block";
   dropdownOptions.style.display = isVisible ? "none" : "block";
   chevronDown.style.transform = isVisible ? "rotate(0deg)" : "rotate(180deg)";
-}
+};
 
 optionsBtn.addEventListener('click', hidePopularOptions);
 
 window.addEventListener('click', (e) => {
-  if ((!optionsBtnContainer.contains(e.target))) {
+  if (!optionsBtnContainer.contains(e.target)) {
     dropdownOptions.style.display = "none";
     chevronDown.style.transform = "rotate(0deg)";
   }
@@ -186,7 +233,7 @@ dropdownOptionsLi.forEach((option) => {
 
 /****************************************
  TIMEFRAME(now) BUTTON in filter section 
- ****************************************/
+*****************************************/
 
 const timeframeOptionsContainer = document.querySelector('.timeframe-options-div');
 const nowBtn = document.querySelector('.now-btn');

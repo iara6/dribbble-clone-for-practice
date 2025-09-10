@@ -20,8 +20,6 @@ body {
   display: flex;
   align-items: center;
   font-size: 0.875rem;
-
-  /* column-gap: 1rem;  *//* add class */
 }
 
 .header-div__logo img {
@@ -36,9 +34,6 @@ body {
   margin-left: 1rem;
 }
 
-.header-div__search-box-wrapper input {
- /*  width: 100% !important; */
-}
 .shots-btn {
   display: flex;
   align-items: center;
@@ -46,7 +41,6 @@ body {
   top: 9.4px;
   right: 3.4rem;
   font-weight: 500;
-  border: 1px solid red; /*  */
   border-radius: 8px;
   padding: 0.4rem;
   cursor: pointer;
@@ -57,32 +51,35 @@ body {
 }
 
 .shots-btn-options {
-  /* display: none; */
+  display: none;
   position: absolute;
   top: 3rem;
-  right: -1.6rem;
+  right: 0;
   z-index: 10;
 
   background-color: white;
   list-style: none;
   font-weight: 450;
-  /* font-size: 0.75rem; */
-  border: 1px solid blue;
   border-radius: 8px;
   padding: 0.75rem;
   width: 9.375rem; /* 150px */
 }
+
 .shots-btn-options li {
   padding: 0.75rem;
   line-height: 1.1;
+  cursor: pointer;
 }
+
+.shots-btn-options li.active {
+  font-weight: 600;
+}
+
 .shots-chevron-down {
   font-size: 0.6rem;
   margin-left: 0.4rem;
-  transition: transform 170ms linear;
   margin-bottom: -3px;
 }
-
 
 .header-div__navigation {
   margin-left: 1.5rem;
@@ -94,10 +91,10 @@ body {
 
 .header-div__navigation .header-div__option {
   padding-inline: 1rem;
-  /* cursor: pointer; */
   text-wrap: nowrap;
   position: relative;
 }
+
 .header-div__option > span {
   display: flex;
   align-items: center;
@@ -129,6 +126,7 @@ body {
   visibility: hidden;
   transition: opacity 300ms ease;
 }
+
 .header-div__expandable li {
   display: flex;
   align-items: center;
@@ -138,10 +136,12 @@ body {
   font-size: 0.875rem;
   cursor: pointer;
 }
+
 .header-div__expandable li:first-child {
   padding-bottom: 0.75rem;
  
 }
+
 .header-div__expandable-explore li:first-child,
 .header-div__expandable-explore li:nth-child(2),
 .header-div__expandable-find li,
@@ -423,6 +423,7 @@ input[type="search"] {
 }
 
 .search-box-wrapper:hover input[type="search"],
+.header-div__search-box-wrapper:hover input[type="search"],
 input[type="search"]:focus  {
   outline: solid 2px rgb(216, 112, 147, 0.2);
 }
