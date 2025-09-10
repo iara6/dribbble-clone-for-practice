@@ -1,28 +1,5 @@
 import {designProjects, designProjectsNew} from './design-projects.js';
 
-/* const navbar = document.getElementById("nav");
-const topLink = document.querySelector(".top-link");
-
-window.addEventListener("scroll", () => {
-  // console.log(window.pageYOffset);
-  const scrollHeight = window.pageYOffset;
-  const navHeight = navbar.getBoundingClientRect().height;
-  // console.log(navHeight); // 102
-
-  if (scrollHeight > navHeight) {
-    navbar.classList.add("fixed-nav");
-  } else {
-    navbar.classList.remove("fixed-nav");
-  }
-
-  if (scrollHeight > 500) {
-    topLink.classList.add("show-link")
-  } else {
-    topLink.classList.remove("show-link");
-  }
-}); */
-
-/* Uncaught (in promise) AbortError: The play() request was interrupted because video-only background media was paused to save power. */
 
 /************************************
  FIXED HEADER + SEARCH BOX on scroll
