@@ -11,7 +11,6 @@ const headerSearchBox = document.querySelector('.header-div__search-box-wrapper'
 
 window.addEventListener('scroll', () => {
   const scrollHeight = window.pageYOffset;
-  console.log(scrollHeight);
   
   if (scrollHeight > 450) {
     header.classList.add('fixed-header');

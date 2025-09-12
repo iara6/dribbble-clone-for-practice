@@ -1051,12 +1051,24 @@ input[type="search"]:focus  {
 .carousel {
   padding-top: 3.75rem;
   border: 1px dotted black;
+  overflow: hidden;
 }
 
 .carousel__container {
   display: grid;
   grid-auto-columns: min-content;
+  grid-auto-flow: column;
+  gap: 2rem;
   width: fit-content;
+
+  will-change: transform;
+  animation: carousel-animation 40s linear infinite;
+ 
+}
+
+.carousel-article {
+  cursor: pointer;
+  
 }
 .carousel-article__image-container {
   height: 150px;
@@ -1067,7 +1079,23 @@ input[type="search"]:focus  {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 8px;
 }
+
+.carousel-article__title {
+  margin-top: 0.75rem;
+  font-size: 0.875rem; /* 14px */
+  font-weight: 500;
+  line-height: 1.75rem;
+}
+
+@keyframes carousel-animation {
+  100% {
+    /* transform: translateX(calc(-1 * (16 * 200px + 2rem))); */
+    transform: translateX(-100%);
+  }
+} 
+/* articles' number * article width + gap */
 
 footer {
   border: 1px dashed red;
