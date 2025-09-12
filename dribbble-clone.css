@@ -1026,9 +1026,11 @@ input[type="search"]:focus  {
 }
 
 .back-to-top-button {
-  position: fixed;
-  right: 1.25rem;
+  position: sticky;
+  left: 100%;
   bottom: 1.25rem;
+  margin-right: -3.3rem;
+  margin-top: -2rem;
   width: 50px;
   filter: opacity(40%);
   transition: all 100ms linear;
@@ -1044,6 +1046,27 @@ input[type="search"]:focus  {
 .back-to-top-button img {
   height: 50px;
   width: 50px;
+}
+
+.carousel {
+  padding-top: 3.75rem;
+  border: 1px dotted black;
+}
+
+.carousel__container {
+  display: grid;
+  grid-auto-columns: min-content;
+  width: fit-content;
+}
+.carousel-article__image-container {
+  height: 150px;
+  width: 200px;
+}
+
+.carousel-article__image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 footer {
