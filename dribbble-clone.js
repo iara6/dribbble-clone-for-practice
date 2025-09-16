@@ -24,6 +24,14 @@ window.addEventListener('scroll', () => {
 });
 
 
+/************************************
+ ANIMATED MENU ICON (Hamburger to X)
+*************************************/
+
+const toggleBtn = document.querySelector('.nav-toggle-button');
+
+
+
 /****************************************
  SEARCH BOX PLACEHOLDER AND TRENDS LINKS 
 *****************************************/
