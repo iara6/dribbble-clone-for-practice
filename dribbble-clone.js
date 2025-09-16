@@ -30,6 +30,9 @@ window.addEventListener('scroll', () => {
 
 const toggleBtn = document.querySelector('.nav-toggle-button');
 
+toggleBtn.addEventListener('click', () => {
+  toggleBtn.classList.toggle('change')
+});
 
 
 /****************************************

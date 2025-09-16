@@ -31,8 +31,17 @@ body {
   font-size: 0.875rem;
 }
 
+.nav-toggle-menu-container {
+  border: 1px solid red;
+  padding: 2rem;
+  border-top: 1px solid rgb(231, 231, 233);
+}
+.nav-toggle-menu-container li {
+  list-style: none;
+}
 .nav-toggle-button {
-  display: flex;
+ /*  display: flex; */
+  display: none;
   flex-direction: column;
   gap: 4px;
   width: 24px;
@@ -46,6 +55,7 @@ body {
   display: block;
   height: 3px;
   background-color: black;
+  transition: 200ms cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .nav-toggle-button span:first-child {
@@ -58,17 +68,16 @@ body {
   width: 50%;
 }
 
-.change .nav-toggle-button span:first-child {
-  transform: (0, 11px) rotate(-45deg);
+.nav-toggle-button.change span:first-child {
+  transform: translate(0, 7px) rotate(45deg);
 }
-.change .nav-toggle-button span:nth-child(2) {
+.nav-toggle-button.change span:nth-child(2) {
   opacity: 0;
 }
-.change .nav-toggle-button span:last-child {
-  transform: (0, 11px) rotate(45deg);
+.nav-toggle-button.change span:last-child {
+  transform: translate(0, -7px) rotate(-45deg);
+  width: 100%;
 }
-
-
 
 .header-div__logo img {
   height: 25px;
@@ -1226,4 +1235,17 @@ input[type="search"]:focus  {
 .footer__more-links a {
   text-decoration: none;
   color: rgb(110, 109, 122);
+}
+
+
+@media screen and (max-width:1200px) {
+  .nav-toggle-button {
+    display: flex;
+  }
+  .header-div__navigation {
+    display: none;
+  }
+  .header-div__search-box-wrapper {
+    margin-left: 0;
+  }
 }
