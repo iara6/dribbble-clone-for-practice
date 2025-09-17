@@ -29,9 +29,19 @@ window.addEventListener('scroll', () => {
 *************************************/
 
 const toggleBtn = document.querySelector('.nav-toggle-button');
+const modalOverlay = document.querySelector('.modal-overlay');
+const navToggleMenu = document.querySelector('.nav-toggle-menu-container');
 
 toggleBtn.addEventListener('click', () => {
-  toggleBtn.classList.toggle('change')
+  toggleBtn.classList.toggle('change');
+  navToggleMenu.classList.toggle('open-nav-toggle-menu');
+  modalOverlay.classList.toggle('open-modal');
+
+   if (navToggleMenu.classList.contains('open-nav-toggle-menu')) {
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = '';
+  }
 });
 
 
