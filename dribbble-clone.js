@@ -26,20 +26,41 @@ window.addEventListener('scroll', () => {
 
 /************************************
  ANIMATED MENU ICON (Hamburger to X)
+ TOGGLE MENU with MODAL OVERLAY
 *************************************/
 
 const toggleBtn = document.querySelector('.nav-toggle-button');
 const modalOverlay = document.querySelector('.modal-overlay');
 const navToggleMenu = document.querySelector('.nav-toggle-menu-container');
+const navToggleMenuOptions = document.querySelectorAll('.nav-toggle-menu-container li');
+const headerDiv = document.querySelector('.header-div');
 
 toggleBtn.addEventListener('click', () => {
   toggleBtn.classList.toggle('change');
   navToggleMenu.classList.toggle('open-nav-toggle-menu');
   modalOverlay.classList.toggle('open-modal');
 
+  navToggleMenuOptions.forEach(li => {
+    li.classList.toggle('translateX');
+  });
+
    if (navToggleMenu.classList.contains('open-nav-toggle-menu')) {
     document.body.style.overflow = 'hidden';
   } else {
+    document.body.style.overflow = '';
+  }
+});
+
+window.addEventListener('click', (event) => {
+  if (event.target === modalOverlay || event.target === headerDiv) {
+    toggleBtn.classList.remove('change');
+    navToggleMenu.classList.remove('open-nav-toggle-menu');
+    modalOverlay.classList.remove('open-modal');
+
+    navToggleMenuOptions.forEach(li => {
+      li.classList.remove('translateX');
+    });
+
     document.body.style.overflow = '';
   }
 });
