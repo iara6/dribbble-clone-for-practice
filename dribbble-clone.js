@@ -32,7 +32,8 @@ window.addEventListener('scroll', () => {
 const toggleBtn = document.querySelector('.nav-toggle-button');
 const modalOverlay = document.querySelector('.modal-overlay');
 const navToggleMenu = document.querySelector('.nav-toggle-menu-container');
-const navToggleMenuOptions = document.querySelectorAll('.nav-toggle-menu-container li');
+/* const navToggleMenuOptions = document.querySelectorAll('.nav-toggle-menu-container li'); */
+const navToggleMenuOptions = document.querySelectorAll('.nav-toggle-menu__option-title');
 const headerDiv = document.querySelector('.header-div');
 
 toggleBtn.addEventListener('click', () => {
@@ -40,8 +41,11 @@ toggleBtn.addEventListener('click', () => {
   navToggleMenu.classList.toggle('open-nav-toggle-menu');
   modalOverlay.classList.toggle('open-modal');
 
-  navToggleMenuOptions.forEach(li => {
+  /* navToggleMenuOptions.forEach(li => {
     li.classList.toggle('translateX');
+  }); */
+  navToggleMenuOptions.forEach(option => {
+    option.classList.toggle('translateX');
   });
 
    if (navToggleMenu.classList.contains('open-nav-toggle-menu')) {
@@ -57,14 +61,31 @@ window.addEventListener('click', (event) => {
     navToggleMenu.classList.remove('open-nav-toggle-menu');
     modalOverlay.classList.remove('open-modal');
 
-    navToggleMenuOptions.forEach(li => {
+  /*   navToggleMenuOptions.forEach(li => {
       li.classList.remove('translateX');
     });
-
+ */
+    navToggleMenuOptions.forEach(option => {
+      option.classList.remove('translateX');
+    });
     document.body.style.overflow = '';
   }
 });
 
+
+/*******************************
+ TOGGLE MENU EXPANDABLE CONTENT
+********************************/
+const collapsibleMenuOption = document.querySelectorAll('.nav-toggle-menu__option-title');
+
+collapsibleMenuOption.forEach(option => {
+  const collapsibleContainer = option.parentElement;
+  const insideContent = collapsibleContainer.querySelector('.nav-toggle-div__expandable');
+
+  option.addEventListener('click', () => {
+    collapsibleContainer.classList.toggle('show-hide-content');
+  });
+});
 
 /****************************************
  SEARCH BOX PLACEHOLDER AND TRENDS LINKS 
