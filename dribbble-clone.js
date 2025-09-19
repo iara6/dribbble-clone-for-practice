@@ -32,19 +32,21 @@ window.addEventListener('scroll', () => {
 const toggleBtn = document.querySelector('.nav-toggle-button');
 const modalOverlay = document.querySelector('.modal-overlay');
 const navToggleMenu = document.querySelector('.nav-toggle-menu-container');
-/* const navToggleMenuOptions = document.querySelectorAll('.nav-toggle-menu-container li'); */
 const navToggleMenuOptions = document.querySelectorAll('.nav-toggle-menu__option-title');
 const headerDiv = document.querySelector('.header-div');
+
+const navToggleInsideOptions = document.querySelectorAll('.nav-toggle-div__expandable');
 
 toggleBtn.addEventListener('click', () => {
   toggleBtn.classList.toggle('change');
   navToggleMenu.classList.toggle('open-nav-toggle-menu');
   modalOverlay.classList.toggle('open-modal');
 
-  /* navToggleMenuOptions.forEach(li => {
-    li.classList.toggle('translateX');
-  }); */
   navToggleMenuOptions.forEach(option => {
+    option.classList.toggle('translateX');
+  });
+
+  navToggleInsideOptions.forEach(option => {
     option.classList.toggle('translateX');
   });
 
@@ -61,13 +63,14 @@ window.addEventListener('click', (event) => {
     navToggleMenu.classList.remove('open-nav-toggle-menu');
     modalOverlay.classList.remove('open-modal');
 
-  /*   navToggleMenuOptions.forEach(li => {
-      li.classList.remove('translateX');
-    });
- */
     navToggleMenuOptions.forEach(option => {
       option.classList.remove('translateX');
     });
+
+    navToggleInsideOptions.forEach(option => {
+      option.classList.remove('translateX');
+    });
+
     document.body.style.overflow = '';
   }
 });
@@ -76,16 +79,25 @@ window.addEventListener('click', (event) => {
 /*******************************
  TOGGLE MENU EXPANDABLE CONTENT
 ********************************/
-const collapsibleMenuOption = document.querySelectorAll('.nav-toggle-menu__option-title');
 
-collapsibleMenuOption.forEach(option => {
+const collapsibleMenuOptions = document.querySelectorAll('.nav-toggle-menu__option-title');
+
+collapsibleMenuOptions.forEach(option => {
   const collapsibleContainer = option.parentElement;
   const insideContent = collapsibleContainer.querySelector('.nav-toggle-div__expandable');
 
   option.addEventListener('click', () => {
     collapsibleContainer.classList.toggle('show-hide-content');
+
+    if (collapsibleContainer.classList.contains('show-hide-content')) {
+      let fullHeight = insideContent.scrollHeight + "px";
+      insideContent.style.maxHeight = fullHeight;
+    } else {
+      insideContent.style.maxHeight = "0px";
+    };
   });
 });
+
 
 /****************************************
  SEARCH BOX PLACEHOLDER AND TRENDS LINKS 
@@ -405,6 +417,7 @@ if (colorInput.value === '') {
   colorPaletteIcon.classList.remove('solid-color');
 }
 
+
 /***********************
   GENERATE MAIN content
 ************************/
@@ -478,6 +491,7 @@ function displayProjects(projects) {
   projectsContainer.innerHTML = displayMainContent;
 };
 
+
 /********************
   BACK-TO-TOP button
 *********************/
@@ -496,11 +510,11 @@ function btnVisibleOnScroll() {
 
 window.addEventListener('scroll', btnVisibleOnScroll);
 
+
 /****************
   COPYRIGHT DATE
 ****************/
 
 const copyrightDate = document.querySelector('.copyright-date');
-
 copyrightDate.innerHTML = new Date().getFullYear();
 
