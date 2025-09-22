@@ -179,9 +179,10 @@ shotsDropdownOptionsLi.forEach((option) => {
   });
 });
 
-/******************************
+
+/*****************************
   VIDEOPLAYER CLIPS with INFO 
-*******************************/
+******************************/
 
 const designersData = [{
   name: 'AmazingUI',
@@ -258,6 +259,31 @@ playPauseBtn.addEventListener('click', () => {
     videoPlayer.play();
     pauseIcon.style.display = "block";
   }
+});
+
+
+/*********************************
+ SCROLL BUTTONS on filter section
+**********************************/
+
+const filterCategories = document.querySelector('.main-content__filter-categories');
+const btnLeft = document.querySelector('.scroll-btn.left');
+const btnRight = document.querySelector('.scroll-btn.right');
+
+const scrollNumber = 500;
+
+btnLeft.addEventListener('click', () => {
+  filterCategories.scrollBy({
+    left: -scrollNumber,
+    behavior: 'smooth'
+  });
+});
+
+btnRight.addEventListener('click', () => {
+  filterCategories.scrollBy({
+    left: scrollNumber,
+    behavior: 'smooth'
+  });
 });
 
 
@@ -513,7 +539,7 @@ window.addEventListener('scroll', btnVisibleOnScroll);
 
 /****************
   COPYRIGHT DATE
-****************/
+*****************/
 
 const copyrightDate = document.querySelector('.copyright-date');
 copyrightDate.innerHTML = new Date().getFullYear();
