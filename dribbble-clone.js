@@ -34,7 +34,6 @@ const modalOverlay = document.querySelector('.modal-overlay');
 const navToggleMenu = document.querySelector('.nav-toggle-menu-container');
 const navToggleMenuOptions = document.querySelectorAll('.nav-toggle-menu__option-title');
 const headerDiv = document.querySelector('.header-div');
-
 const navToggleInsideOptions = document.querySelectorAll('.nav-toggle-div__expandable');
 
 toggleBtn.addEventListener('click', () => {
@@ -50,7 +49,7 @@ toggleBtn.addEventListener('click', () => {
     option.classList.toggle('translateX');
   });
 
-   if (navToggleMenu.classList.contains('open-nav-toggle-menu')) {
+  if (navToggleMenu.classList.contains('open-nav-toggle-menu')) {
     document.body.style.overflow = 'hidden';
   } else {
     document.body.style.overflow = '';
@@ -120,11 +119,11 @@ function changePlaceholder() {
     searchInput.placeholder = 'What do you need designed?';
   }
 
-   shotsTrends.style.display = 'none';
-   designersTrends.style.display = 'none';
-   servicesTrends.style.display = 'none';
+  shotsTrends.style.display = 'none';
+  designersTrends.style.display = 'none';
+  servicesTrends.style.display = 'none';
 
-   if (shots.checked) {
+  if (shots.checked) {
     shotsTrends.style.display = 'block';
   } else if (designers.checked) {
     designersTrends.style.display = 'block';
@@ -270,7 +269,7 @@ const filterCategories = document.querySelector('.main-content__filter-categorie
 const btnLeft = document.querySelector('.scroll-btn.left');
 const btnRight = document.querySelector('.scroll-btn.right');
 
-const scrollNumber = 500;
+const scrollNumber = 600;
 
 btnLeft.addEventListener('click', () => {
   filterCategories.scrollBy({

@@ -94,9 +94,11 @@ body {
 .nav-toggle-menu-container li:nth-child(1) .nav-toggle-div__expandable {
   transition-delay: 0ms;
 }
+
 .nav-toggle-menu-container li:nth-child(1) .nav-toggle-menu__option-title {
   margin-top: -1rem;
 }
+
 .nav-toggle-menu-container li:nth-child(2) .nav-toggle-menu__option-title,
 .nav-toggle-menu-container li:nth-child(2) .nav-toggle-div__expandable {
   transition-delay: 30ms;
@@ -325,7 +327,6 @@ body {
   transition: opacity 300ms ease;
 }
 
-
 .header-div__expandable li {
   display: flex;
   align-items: center;
@@ -335,6 +336,7 @@ body {
   font-size: 0.875rem;
   cursor: pointer;
 }
+
 .header-div__expandable li:first-child {
   padding-bottom: 0.75rem;
  
@@ -742,9 +744,11 @@ input[type="search"]:focus  {
   justify-content: space-between;
   align-items: center;
 }
+
 .main-content__dropdown-btn {
   margin-right: 40px;
 }
+
 .main-content__dropdown-btn,
 .timeframe-options-div {
   position: relative;
@@ -828,11 +832,13 @@ input[type="search"]:focus  {
   left: -1rem;
   background: linear-gradient(to right, white 60%, transparent);
 }
+
 .scroll-btn.right {
   position: absolute;
   right: -1rem;
   background: linear-gradient(to left, white 60%, transparent);
 }
+
 .main-content__filter-categories {
   list-style: none;
   display: flex;
@@ -859,13 +865,16 @@ input[type="search"]:focus  {
 .main-content__filter-categories li:not(:first-child) a:hover {
   color: rgb(0, 0, 0, 0.6);
 }
+
 .main-content__filter-categories li,
 .main-content__filters-btn {
   white-space: nowrap;
 }
+
 .main-content__filters-btn { 
   margin-left: 5rem;
 }
+
 .main-content__filters-btn span {
   border: 1px solid rgb(128, 128, 128, 0.2);
   border-radius: 1.1rem;
@@ -1140,6 +1149,7 @@ input[type="search"]:focus  {
 .like-project-btn:hover {
   color: rgb(107, 107, 108);
 }
+
 .designer-information {
   display: flex;
   justify-content: space-between;
@@ -1490,7 +1500,43 @@ input[type="search"]:focus  {
   .header-div__action-buttons button:last-child {
     height: 2.5rem;
   }
+  .nav-toggle-button {
+    padding-left: 0;
+  }
+  .general-info {
+    padding-inline: 1rem;
+  }
+}
 
+@media screen and (max-width:765px) {
+  .general-info__text h1 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    text-align: center;
+    line-height: 2.5rem;
+  }
+  .general-info__text h2 {
+    text-align: center;
+    margin-top: 0.7rem;
+  }
+  .search-options {
+    gap: 0;
+    justify-content: center;
+  }
+  .search-options label {
+    padding: 1rem;
+  }
+  .footer__lower-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 0;
+    line-height: 2;
+  }
+  .footer-navigation {
+    flex-wrap: wrap;
+    justify-content: center;
+    line-height: 2.2;
+  }
 }
 
 @media screen and (min-width:1200px)  {
